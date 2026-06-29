@@ -32,116 +32,112 @@
         <a href="#pricing">Pricing</a>
         <a href="#download">FAQ</a>
       </nav>
-      <a href="#download" class="btn btn--primary">Get Started Free →</a>
+      <a href="#download" class="btn btn--white">Get Started Free →</a>
     </div>
   </header>
 
   <!-- Social proof bar -->
   <div class="cities-bar">
-    <div class="container cities-bar__inner">
+    <div class="container cities-bar__container">
       <span class="cities-bar__label">Trusted by restaurants:</span>
-      <div class="cities-bar__list">
-        <span class="cities-bar__city active">50,000+ orders processed</span>
-        <span class="cities-bar__city">200+ restaurants onboarded</span>
-        <span class="cities-bar__city">4.9★ average rating</span>
-        <span class="cities-bar__city">Sub-second order relay</span>
-        <span class="cities-bar__city">Zero downtime guarantee</span>
-        <span class="cities-bar__city">Enterprise-grade security</span>
+      <div class="cities-bar__inner">
+        <div class="cities-bar__list">
+          <span class="cities-bar__city active">50,000+ orders processed</span>
+          <span class="cities-bar__city">200+ restaurants onboarded</span>
+          <span class="cities-bar__city">4.9★ average rating</span>
+          <span class="cities-bar__city">Sub-second order relay</span>
+          <span class="cities-bar__city">Zero downtime guarantee</span>
+          <span class="cities-bar__city">Enterprise-grade security</span>
+        </div>
+        <div class="cities-bar__list" aria-hidden="true">
+          <span class="cities-bar__city active">50,000+ orders processed</span>
+          <span class="cities-bar__city">200+ restaurants onboarded</span>
+          <span class="cities-bar__city">4.9★ average rating</span>
+          <span class="cities-bar__city">Sub-second order relay</span>
+          <span class="cities-bar__city">Zero downtime guarantee</span>
+          <span class="cities-bar__city">Enterprise-grade security</span>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <div class="hero__badge">
-          <span>🚀</span> Trusted by 200+ restaurants across India
-        </div>
-        <h1 class="hero__title">
-          Your Restaurant, <span>One Scan Away.</span>
-        </h1>
-        <p class="hero__subtitle">
-          Turn every table into a self-service ordering station. Tablekard gives your guests a seamless QR-powered menu, instant ordering, and contactless payments — no app downloads, no hardware, no hassle.
-        </p>
-        <div class="hero__cta">
-          <a href="#download" class="btn btn--primary btn--lg">Start Your Free Trial</a>
-          <a href="#how-it-works" class="btn btn--outline btn--lg">Watch Demo</a>
-        </div>
-        <p class="hero__trust">
-          ✓ No credit card required &nbsp;&nbsp; ✓ Setup in under 10 minutes &nbsp;&nbsp; ✓ Cancel anytime
-        </p>
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <strong>200+</strong>
-            <span>Restaurants onboarded</span>
+  <section class="hero-v2">
+    <!-- Decorative SVG curves -->
+    <svg class="hero-v2__curves" viewBox="0 0 1440 700" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <!-- Large circle left -->
+      <circle cx="200" cy="350" r="280" stroke="rgba(200,170,160,0.25)" stroke-width="1.2" fill="none"/>
+      <!-- Medium circle right -->
+      <circle cx="1200" cy="300" r="220" stroke="rgba(200,170,160,0.2)" stroke-width="1" fill="none"/>
+      <!-- Swooping curve top-left to bottom-right -->
+      <path d="M -50 100 Q 400 -50, 700 200 T 1500 150" stroke="rgba(200,170,160,0.18)" stroke-width="1" fill="none"/>
+      <!-- Swooping curve bottom -->
+      <path d="M -100 500 Q 300 700, 700 450 T 1550 550" stroke="rgba(200,170,160,0.18)" stroke-width="1" fill="none"/>
+    </svg>
+
+    <!-- Floating food images -->
+    <img src="images/hero_leaf.png" class="hero-v2__float hero-v2__float--leaf" alt="" aria-hidden="true" />
+    <img src="images/hero_burger.png" class="hero-v2__float hero-v2__float--burger" alt="" aria-hidden="true" />
+    <img src="images/hero_dumplings.png" class="hero-v2__float hero-v2__float--dumplings" alt="" aria-hidden="true" />
+    <img src="images/hero_pizza.png" class="hero-v2__float hero-v2__float--pizza" alt="" aria-hidden="true" />
+    <img src="images/hero_tomato.png" class="hero-v2__float hero-v2__float--tomato1" alt="" aria-hidden="true" />
+    <img src="images/hero_tomato.png" class="hero-v2__float hero-v2__float--tomato2" alt="" aria-hidden="true" />
+    <img src="images/hero_tomato.png" class="hero-v2__float hero-v2__float--tomato3" alt="" aria-hidden="true" />
+
+    <!-- Center content -->
+    <div class="hero-v2__center">
+      <h1 class="hero-v2__title">Better food for<br>more people</h1>
+      <p class="hero-v2__subtitle">
+        For over a decade, we've enabled our<br class="hero-v2__br-desktop">
+        customers to discover new tastes,<br class="hero-v2__br-desktop">
+        delivered right to their doorstep
+      </p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-v2__stats-bar">
+      <div class="hero-v2__stat-item">
+        <div class="hero-v2__stat-content">
+          <div class="hero-v2__stat-text">
+            <span class="hero-v2__stat-number">3,00,000+</span>
+            <span class="hero-v2__stat-label">restaurants</span>
           </div>
-          <div class="hero__stat">
-            <strong>50K+</strong>
-            <span>Orders processed</span>
-          </div>
-          <div class="hero__stat">
-            <strong>10 min</strong>
-            <span>Average setup time</span>
+          <div class="hero-v2__stat-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/>
+              <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/>
+              <path d="M12 3v6"/>
+            </svg>
           </div>
         </div>
       </div>
-
-      <div class="phone-mockup">
-        <div class="phone-mockup__float phone-mockup__float--1">
-          <strong>🔔 New Order!</strong>
-          <span>Table 5 · ₹840</span>
+      <div class="hero-v2__stat-divider"></div>
+      <div class="hero-v2__stat-item">
+        <div class="hero-v2__stat-content">
+          <div class="hero-v2__stat-text">
+            <span class="hero-v2__stat-number">800+</span>
+            <span class="hero-v2__stat-label">cities</span>
+          </div>
+          <div class="hero-v2__stat-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#E23744" stroke="none">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </div>
         </div>
-        <div class="phone-mockup__float phone-mockup__float--2">
-          <strong>📲 Scan &amp; Order</strong>
-          <span>No app needed</span>
-        </div>
-        <div class="phone-mockup__device">
-          <div class="phone-mockup__screen">
-            <div class="phone-mockup__status">
-              <span>9:41</span>
-              <span>📶 🔋</span>
-            </div>
-            <div class="phone-mockup__content">
-              <div class="phone-mockup__banner">
-                <h4>The Spice Route</h4>
-                <p>North Indian · Table 5</p>
-              </div>
-              <div class="phone-mockup__categories">
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🥗</div>
-                  <span>Starters</span>
-                </div>
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🍛</div>
-                  <span>Main</span>
-                </div>
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🥤</div>
-                  <span>Drinks</span>
-                </div>
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🍰</div>
-                  <span>Desserts</span>
-                </div>
-              </div>
-              <div class="phone-mockup__restaurant">
-                <img class="phone-mockup__rest-img" src="https://images.unsplash.com/photo-1585937421612-70a008296fbe?w=120&h=120&fit=crop" alt="Menu item" />
-                <div class="phone-mockup__rest-info">
-                  <h5>Butter Chicken</h5>
-                  <p>Rich tomato gravy · ₹320</p>
-                  <span class="phone-mockup__rest-rating">🟢 Veg</span>
-                </div>
-              </div>
-              <div class="phone-mockup__restaurant">
-                <img class="phone-mockup__rest-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=120&h=120&fit=crop" alt="Menu item" />
-                <div class="phone-mockup__rest-info">
-                  <h5>Paneer Tikka</h5>
-                  <p>Smoky tandoori · ₹280</p>
-                  <span class="phone-mockup__rest-rating">🟢 Veg</span>
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="hero-v2__stat-divider"></div>
+      <div class="hero-v2__stat-item">
+        <div class="hero-v2__stat-content">
+          <div class="hero-v2__stat-text">
+            <span class="hero-v2__stat-number">3 billion+</span>
+            <span class="hero-v2__stat-label">orders delivered</span>
+          </div>
+          <div class="hero-v2__stat-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="18" rx="2"/>
+              <path d="M8 7v10M12 7v10M16 7v5"/>
+              <path d="M2 17h20"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -407,49 +403,71 @@
     </style>
   </section>
 
-  <!-- Section 3: Pricing -->
-  <section class="section gold" id="pricing">
-    <div class="container gold__grid">
-      <div class="gold__content">
-        <div class="gold__badge">⭐ Most Popular — Pro Plan</div>
-        <h2 class="gold__title">
-          Simple, Transparent <span>Pricing</span>
-        </h2>
-        <p class="gold__desc">
-          No hidden fees. No per-order commissions. Just flat monthly plans. Start with a 14-day free trial — no credit card required.
-        </p>
-        <div class="gold__highlight">
-          <span class="gold__percent">₹2,499</span>
-          <span class="gold__highlight-text">/month for growing<br />restaurants &amp; multi-staff ops</span>
+  <!-- Section 3: Pricing (Gold-style) -->
+  <!-- Curved top edge (sits in white area above) -->
+  <div class="pricing-gold__curve-top">
+    <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+      <path d="M0 0 Q720 120 1440 0 V120 H0 Z" fill="black"/>
+    </svg>
+  </div>
+
+  <section class="pricing-gold" id="pricing">
+    <!-- Floating coin decorations -->
+    <div class="pricing-gold__coin pricing-gold__coin--1">
+      <img src="images/gold_coin.png" alt="" width="70" height="70" />
+    </div>
+    <div class="pricing-gold__coin pricing-gold__coin--2">
+      <img src="images/gold_coin.png" alt="" width="55" height="55" />
+    </div>
+
+    <!-- Main content -->
+    <div class="pricing-gold__inner">
+      <!-- Brand -->
+      <span class="pricing-gold__brand-name">tablekard</span>
+      <h2 class="pricing-gold__logo-text">
+        <svg class="pricing-gold__crown" width="42" height="36" viewBox="0 0 42 36" fill="url(#crownGrad)">
+          <path d="M4 28L0 8l12 10L21 2l9 16 12-10-4 20H4z"/>
+          <rect x="4" y="30" width="34" height="5" rx="2"/>
+          <defs><linearGradient id="crownGrad" x1="0" y1="0" x2="42" y2="36"><stop offset="0%" stop-color="#f0d27a"/><stop offset="50%" stop-color="#d4a44a"/><stop offset="100%" stop-color="#a67c2e"/></linearGradient></defs>
+        </svg>
+        PR<span class="pricing-gold__o">O</span>
+      </h2>
+      <p class="pricing-gold__tagline">
+        India's <strong>Top Value Plan</strong><br>for <strong>Restaurant Owners</strong>
+      </p>
+
+      <!-- Benefits label -->
+      <div class="pricing-gold__benefits-label">★ PRO BENEFITS ★</div>
+
+      <!-- Benefits row -->
+      <div class="pricing-gold__benefits">
+        <div class="pricing-gold__benefit">
+          <div class="pricing-gold__benefit-icon">💰</div>
+          <div class="pricing-gold__benefit-text">
+            <strong>₹2,499/month</strong>
+            <span>Flat pricing, no commissions</span>
+          </div>
         </div>
-        <a href="#download" class="btn btn--white">Start Free Trial</a>
-      </div>
-      <div class="gold__card">
-        <div class="gold__card-header">
-          <span class="gold__card-logo">PRO</span>
-          <span class="gold__card-tag">Recommended</span>
-        </div>
-        <div class="gold__perks">
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>Unlimited menu items &amp; tables</span>
-          </div>
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>QR ordering + online payments via Razorpay</span>
-          </div>
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>Advanced analytics &amp; real-time notifications</span>
-          </div>
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>5 staff accounts + custom branding</span>
+        <div class="pricing-gold__benefit">
+          <div class="pricing-gold__benefit-icon">📲</div>
+          <div class="pricing-gold__benefit-text">
+            <strong>Unlimited QR Orders</strong>
+            <span>Seamless dine-in experience</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Geometric pattern overlay -->
+    <div class="pricing-gold__pattern"></div>
   </section>
+
+  <!-- Curved bottom edge (sits in white area below) -->
+  <div class="pricing-gold__curve-bottom">
+    <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+      <path d="M0 100 Q720 0 1440 100 V0 H0 Z" fill="black"/>
+    </svg>
+  </div>
 
   <!-- Section 4: The Tablekard Ecosystem -->
   <section id="ecosystem" style="
@@ -718,52 +736,11 @@
         <a href="#download" class="btn btn--primary">Start Free Trial →</a>
       </div>
       <div class="hyperpure__visual">
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">🏪</div>
-          <span><strong>1.</strong> Create Your Restaurant</span>
-        </div>
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">📋</div>
-          <span><strong>2.</strong> Add Your Menu</span>
-        </div>
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">📲</div>
-          <span><strong>3.</strong> Print QR Codes &amp; Go Live</span>
-        </div>
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">🎉</div>
-          <span>Customers scan &amp; order instantly</span>
-        </div>
+        <img src="images/scan_qr_table.png" alt="Scanning QR code at table" style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.12);" />
       </div>
     </div>
   </section>
 
-  <!-- Mission -->
-  <section class="mission">
-    <div class="container">
-      <h2 class="mission__title">Smart QR ordering for modern restaurants</h2>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="section download" id="download">
-    <div class="container">
-      <h2 class="download__title">Ready to Transform Your Restaurant?</h2>
-      <p class="download__subtitle">
-        Join hundreds of restaurants already using Tablekard to deliver faster service,<br />
-        eliminate errors, and delight their customers.
-      </p>
-      <div class="download__grid">
-        <div class="download__qr">
-          <canvas id="qr-code" aria-label="QR code demo"></canvas>
-        </div>
-        <div class="download__stores">
-          <a href="#" class="btn btn--white btn--lg">Start Your Free 14-Day Trial →</a>
-          <p class="download__note">No credit card required · Setup in 10 minutes · Cancel anytime</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Premium Footer -->
   <footer class="footer">
