@@ -79,12 +79,8 @@ ul {
   left: 0;
   right: 0;
   z-index: 1000;
-<<<<<<< HEAD
-  background: rgba(255, 255, 255, 0.95);
-  -webkit-backdrop-filter: blur(12px);
-=======
   background: rgba(174, 72, 0, 0.674);
->>>>>>> 9a4879bdee879a1fafea84b965b2b239e7b004f8
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(187, 187, 187, 0.1);
   transition: box-shadow var(--transition);
