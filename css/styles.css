@@ -80,6 +80,7 @@ ul {
   right: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   transition: box-shadow var(--transition);
@@ -666,6 +667,7 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
   padding: 40px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
