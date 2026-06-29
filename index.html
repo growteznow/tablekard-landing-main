@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Tablekard — QR-based contactless dine-in ordering for restaurants. Turn every table into a self-service ordering station." />
+  <meta name="description"
+    content="Tablekard — QR-based contactless dine-in ordering for restaurants. Turn every table into a self-service ordering station." />
   <title>Tablekard — Smart QR Ordering for Modern Restaurants</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
 </head>
+
 <body>
 
   <!-- Promo strip -->
@@ -32,116 +38,124 @@
         <a href="#pricing">Pricing</a>
         <a href="#download">FAQ</a>
       </nav>
-      <a href="#download" class="btn btn--primary">Get Started Free →</a>
+      <a href="#download" class="btn btn--white">Get Started Free →</a>
     </div>
   </header>
 
   <!-- Social proof bar -->
   <div class="cities-bar">
-    <div class="container cities-bar__inner">
+    <div class="container cities-bar__container">
       <span class="cities-bar__label">Trusted by restaurants:</span>
-      <div class="cities-bar__list">
-        <span class="cities-bar__city active">50,000+ orders processed</span>
-        <span class="cities-bar__city">200+ restaurants onboarded</span>
-        <span class="cities-bar__city">4.9★ average rating</span>
-        <span class="cities-bar__city">Sub-second order relay</span>
-        <span class="cities-bar__city">Zero downtime guarantee</span>
-        <span class="cities-bar__city">Enterprise-grade security</span>
+      <div class="cities-bar__inner">
+        <div class="cities-bar__list">
+          <span class="cities-bar__city active">50,000+ orders processed</span>
+          <span class="cities-bar__city">200+ restaurants onboarded</span>
+          <span class="cities-bar__city">4.9★ average rating</span>
+          <span class="cities-bar__city">₹2Cr+ revenue facilitated</span>
+          <span class="cities-bar__city">Built for modern restaurants</span>
+          <span class="cities-bar__city">Zero downtime guarantee</span>
+        </div>
+        <div class="cities-bar__list" aria-hidden="true">
+          <span class="cities-bar__city active">50,000+ orders processed</span>
+          <span class="cities-bar__city">200+ restaurants onboarded</span>
+          <span class="cities-bar__city">4.9★ average rating</span>
+          <span class="cities-bar__city">₹2Cr+ revenue facilitated</span>
+          <span class="cities-bar__city">Built for modern restaurants</span>
+          <span class="cities-bar__city">Zero downtime guarantee</span>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <div class="hero__badge">
-          <span>🚀</span> Trusted by 200+ restaurants across India
-        </div>
-        <h1 class="hero__title">
-          Your Restaurant, <span>One Scan Away.</span>
-        </h1>
-        <p class="hero__subtitle">
-          Turn every table into a self-service ordering station. Tablekard gives your guests a seamless QR-powered menu, instant ordering, and contactless payments — no app downloads, no hardware, no hassle.
-        </p>
-        <div class="hero__cta">
-          <a href="#download" class="btn btn--primary btn--lg">Start Your Free Trial</a>
-          <a href="#how-it-works" class="btn btn--outline btn--lg">Watch Demo</a>
-        </div>
-        <p class="hero__trust">
-          ✓ No credit card required &nbsp;&nbsp; ✓ Setup in under 10 minutes &nbsp;&nbsp; ✓ Cancel anytime
-        </p>
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <strong>200+</strong>
-            <span>Restaurants onboarded</span>
+  <section class="hero-v2">
+    <!-- Decorative SVG curves -->
+    <svg class="hero-v2__curves" viewBox="0 0 1440 700" fill="none" xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid slice">
+      <!-- Large circle left -->
+      <circle cx="200" cy="350" r="280" stroke="rgba(200,170,160,0.25)" stroke-width="1.2" fill="none" />
+      <!-- Medium circle right -->
+      <circle cx="1200" cy="300" r="220" stroke="rgba(200,170,160,0.2)" stroke-width="1" fill="none" />
+      <!-- Swooping curve top-left to bottom-right -->
+      <path d="M -50 100 Q 400 -50, 700 200 T 1500 150" stroke="rgba(200,170,160,0.18)" stroke-width="1" fill="none" />
+      <!-- Swooping curve bottom -->
+      <path d="M -100 500 Q 300 700, 700 450 T 1550 550" stroke="rgba(200,170,160,0.18)" stroke-width="1" fill="none" />
+    </svg>
+
+    <!-- Floating food images -->
+    <img src="images/hero_burger.png" class="hero-v2__float hero-v2__float--burger" alt="" aria-hidden="true" />
+
+    <img src="images/qr-scan.webp" class="hero-v2__float hero-v2__float--qr-scan" alt="" aria-hidden="true" />
+    <img src="images/hero_dumplings.png" class="hero-v2__float hero-v2__float--dumplings" alt="" aria-hidden="true" />
+    <img src="images/hero_pizza.png" class="hero-v2__float hero-v2__float--pizza" alt="" aria-hidden="true" />
+
+    <!-- Center content -->
+    <div class="hero-v2__center">
+      <div class="hero__badge" style="margin: 0 auto 24px auto; justify-content: center; width: fit-content;">🚀 Trusted
+        by 200+ restaurants across India</div>
+      <h1 class="hero-v2__title">Your Restaurant,<br>One Scan Away.</h1>
+      <p class="hero-v2__subtitle" style="max-width: 600px; margin: 0 auto 32px auto;">
+        Turn every table into a self-service ordering station. Tablekard gives your guests a seamless QR-powered menu,
+        instant ordering, and contactless payments — no app downloads, no hardware, no hassle.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="#pricing" class="btn btn--primary" style="padding: 16px 32px; font-size: 1.1rem;">Start Your Free
+          Trial</a>
+        <a href="#how-it-works" class="btn btn--white"
+          style="padding: 16px 32px; font-size: 1.1rem; border: 1px solid rgba(0,0,0,0.1);">▶ Watch Demo</a>
+      </div>
+      <p style="margin-top: 20px; font-size: 13px; color: var(--z-grey-500); font-weight: 500;">
+        ✓ No credit card required &nbsp;&nbsp; ✓ Setup in under 10 minutes &nbsp;&nbsp; ✓ Cancel anytime
+      </p>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="hero-v2__stats-bar">
+      <div class="hero-v2__stat-item">
+        <div class="hero-v2__stat-content">
+          <div class="hero-v2__stat-text">
+            <span class="hero-v2__stat-number">3,00,000+</span>
+            <span class="hero-v2__stat-label">restaurants</span>
           </div>
-          <div class="hero__stat">
-            <strong>50K+</strong>
-            <span>Orders processed</span>
-          </div>
-          <div class="hero__stat">
-            <strong>10 min</strong>
-            <span>Average setup time</span>
+          <div class="hero-v2__stat-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+              <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+              <path d="M12 3v6" />
+            </svg>
           </div>
         </div>
       </div>
-
-      <div class="phone-mockup">
-        <div class="phone-mockup__float phone-mockup__float--1">
-          <strong>🔔 New Order!</strong>
-          <span>Table 5 · ₹840</span>
+      <div class="hero-v2__stat-divider"></div>
+      <div class="hero-v2__stat-item">
+        <div class="hero-v2__stat-content">
+          <div class="hero-v2__stat-text">
+            <span class="hero-v2__stat-number">800+</span>
+            <span class="hero-v2__stat-label">cities</span>
+          </div>
+          <div class="hero-v2__stat-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#E23744" stroke="none">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+            </svg>
+          </div>
         </div>
-        <div class="phone-mockup__float phone-mockup__float--2">
-          <strong>📲 Scan &amp; Order</strong>
-          <span>No app needed</span>
-        </div>
-        <div class="phone-mockup__device">
-          <div class="phone-mockup__screen">
-            <div class="phone-mockup__status">
-              <span>9:41</span>
-              <span>📶 🔋</span>
-            </div>
-            <div class="phone-mockup__content">
-              <div class="phone-mockup__banner">
-                <h4>The Spice Route</h4>
-                <p>North Indian · Table 5</p>
-              </div>
-              <div class="phone-mockup__categories">
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🥗</div>
-                  <span>Starters</span>
-                </div>
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🍛</div>
-                  <span>Main</span>
-                </div>
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🥤</div>
-                  <span>Drinks</span>
-                </div>
-                <div class="phone-mockup__cat">
-                  <div class="phone-mockup__cat-icon">🍰</div>
-                  <span>Desserts</span>
-                </div>
-              </div>
-              <div class="phone-mockup__restaurant">
-                <img class="phone-mockup__rest-img" src="https://images.unsplash.com/photo-1585937421612-70a008296fbe?w=120&h=120&fit=crop" alt="Menu item" />
-                <div class="phone-mockup__rest-info">
-                  <h5>Butter Chicken</h5>
-                  <p>Rich tomato gravy · ₹320</p>
-                  <span class="phone-mockup__rest-rating">🟢 Veg</span>
-                </div>
-              </div>
-              <div class="phone-mockup__restaurant">
-                <img class="phone-mockup__rest-img" src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=120&h=120&fit=crop" alt="Menu item" />
-                <div class="phone-mockup__rest-info">
-                  <h5>Paneer Tikka</h5>
-                  <p>Smoky tandoori · ₹280</p>
-                  <span class="phone-mockup__rest-rating">🟢 Veg</span>
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="hero-v2__stat-divider"></div>
+      <div class="hero-v2__stat-item">
+        <div class="hero-v2__stat-content">
+          <div class="hero-v2__stat-text">
+            <span class="hero-v2__stat-number">3 billion+</span>
+            <span class="hero-v2__stat-label">orders delivered</span>
+          </div>
+          <div class="hero-v2__stat-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E23744" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="18" rx="2" />
+              <path d="M8 7v10M12 7v10M16 7v5" />
+              <path d="M2 17h20" />
+            </svg>
           </div>
         </div>
       </div>
@@ -172,7 +186,7 @@
         color: #8B3A1A;
         margin: 0 0 16px 0;
         line-height: 1.2;
-      ">What's waiting for you<br>on the platform?</h2>
+      ">Everything Your Restaurant Needs</h2>
       <p style="
         font-size: clamp(15px, 1.8vw, 18px);
         color: #6C6C75;
@@ -180,12 +194,13 @@
         margin: 0 auto;
         line-height: 1.6;
         font-weight: 500;
-      ">Our platform is packed with features that<br>enable you to experience restaurant<br>management like never before</p>
+      ">One platform. Zero complexity.</p>
     </div>
 
     <!-- Features Grid -->
-    <div style="position: relative; width: 100%; height: 520px; max-width: 1200px; margin: 0 auto -52px auto; transform: scale(0.9); transform-origin: top center; overflow: visible;">
-      
+    <div
+      style="position: relative; width: 100%; height: 520px; max-width: 1200px; margin: 0 auto -52px auto; transform: scale(0.9); transform-origin: top center; overflow: visible;">
+
       <!-- LEFT SIDE ICONS -->
       <!-- Digital Menu -->
       <div style="
@@ -196,7 +211,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_menu_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Digital Menu">
+        <img src="images/icon_menu_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Digital Menu">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Digital Menu</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Browse dishes</p>
       </div>
@@ -210,7 +226,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_dashboard_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Dashboard">
+        <img src="images/icon_dashboard_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Dashboard">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Dashboard</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Live insights</p>
       </div>
@@ -224,7 +241,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_kitchen_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Kitchen">
+        <img src="images/icon_kitchen_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Kitchen">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Kitchen Hub</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Manage orders</p>
       </div>
@@ -238,7 +256,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_tables_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Tables">
+        <img src="images/icon_tables_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Tables">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Table Manager</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Smart seating</p>
       </div>
@@ -253,7 +272,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_feedback_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Feedback">
+        <img src="images/icon_feedback_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Feedback">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Reviews</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Guest feedback</p>
       </div>
@@ -267,7 +287,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_track_order_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Live Queue">
+        <img src="images/icon_track_order_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Live Queue">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Queue Manager</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Real-time waitlist</p>
       </div>
@@ -281,7 +302,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_analytics_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Analytics">
+        <img src="images/icon_analytics_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Analytics">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Insights</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Sales analytics</p>
       </div>
@@ -295,7 +317,8 @@
         display: flex; flex-direction: column; align-items: center; justify-content: center;
         text-align: center; z-index: 35;
       ">
-        <img src="images/icon_payments_flat_3d.png" width="70" height="70" style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Payments">
+        <img src="images/icon_payments_flat_3d.png" width="70" height="70"
+          style="margin-bottom: 8px; border-radius: 8px; object-fit: cover;" alt="Payments">
         <p style="margin:0; font-size:14px; font-weight:700; color:#1a1a1a; letter-spacing: -0.01em;">Payments</p>
         <p style="margin:2px 0 0; font-size:11px; font-weight:500; color:#888;">Online / Offline</p>
       </div>
@@ -312,8 +335,10 @@
         z-index: 10;
         transition: bottom 1s cubic-bezier(0.16, 1, 0.3, 1);
       ">
-        <img src="images/phone-frame.png" style="display: block; width: 100%; height: 100%; object-fit: fill; position: absolute; top: 0; left: 0; z-index: 20; pointer-events: none;" alt="Phone Frame">
-        
+        <img src="images/phone-frame.png"
+          style="display: block; width: 100%; height: 100%; object-fit: fill; position: absolute; top: 0; left: 0; z-index: 20; pointer-events: none;"
+          alt="Phone Frame">
+
         <!-- Screen Content (in front of the frame if frame is opaque) -->
         <div style="
           position: absolute;
@@ -329,9 +354,10 @@
           <div style="height: 20px; background: #fff; width: 100%;"></div>
 
           <!-- App Content -->
-          <div style="flex: 1; background: #fafafa; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-             <!-- Inner Card on screen -->
-             <div style="
+          <div
+            style="flex: 1; background: #fafafa; padding: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <!-- Inner Card on screen -->
+            <div style="
                background: #fff;
                border-radius: 36px;
                border: 1px solid #eaeaea;
@@ -340,14 +366,17 @@
                box-shadow: 0 12px 30px rgba(0,0,0,0.06);
                text-align: center;
              ">
-               <!-- Lottie Animation QR Code -->
-               <lottie-player src="images/Yellow QR Code Menu.json" background="transparent" speed="1" style="width: 140px; height: 140px; margin: 0 auto 16px auto;" autoplay></lottie-player>
-               <p style="margin:0; font-size:26px; font-weight:700; color:#2a2a35; line-height:1.2; font-family: 'Nunito', sans-serif;">Scan to<br>order</p>
-             </div>
+              <!-- Lottie Animation QR Code -->
+              <lottie-player src="images/Yellow QR Code Menu.json" background="transparent" speed="1"
+                style="width: 140px; height: 140px; margin: 0 auto 16px auto;" autoplay></lottie-player>
+              <p
+                style="margin:0; font-size:26px; font-weight:700; color:#2a2a35; line-height:1.2; font-family: 'Nunito', sans-serif;">
+                Scan to<br>order</p>
+            </div>
           </div>
         </div>
       </div>
-      
+
       <!-- Bottom gradient overlay to blend phone into next section -->
       <div style="
         position: absolute;
@@ -363,93 +392,127 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const phone = document.getElementById('anim-phone');
-        
+
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               // Slide phone up to align top bezel with the highest cards
-              phone.style.bottom = "50px"; 
+              phone.style.bottom = "50px";
               observer.unobserve(entry.target);
             }
           });
         }, { threshold: 0.3 });
-        
+
         observer.observe(document.getElementById('features'));
       });
     </script>
-    
+
     <style>
       @media (max-width: 900px) {
-        #features > div:nth-of-type(2) {
-           height: 800px; /* Adjust height for mobile */
-           display: flex;
-           flex-direction: column;
-           align-items: center;
+        #features>div:nth-of-type(2) {
+          height: 800px;
+          /* Adjust height for mobile */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
+
         /* Hide absolutely positioned icons on very small screens, or stack them. For simplicity, we make them relative */
-        #features > div:nth-of-type(2) > div {
-           position: relative !important;
-           top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
-           margin: 10px;
-           display: inline-flex;
+        #features>div:nth-of-type(2)>div {
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+          right: auto !important;
+          bottom: auto !important;
+          margin: 10px;
+          display: inline-flex;
         }
+
         #anim-phone {
-           position: relative !important;
-           bottom: 0 !important;
-           transform: none !important;
-           margin-top: 40px;
-           border-radius: 40px;
-           padding: 12px;
-           height: 400px;
-           margin-bottom: -100px;
+          position: relative !important;
+          bottom: 0 !important;
+          transform: none !important;
+          margin-top: 40px;
+          border-radius: 40px;
+          padding: 12px;
+          height: 400px;
+          margin-bottom: -100px;
         }
       }
     </style>
   </section>
 
-  <!-- Section 3: Pricing -->
-  <section class="section gold" id="pricing">
-    <div class="container gold__grid">
-      <div class="gold__content">
-        <div class="gold__badge">⭐ Most Popular — Pro Plan</div>
-        <h2 class="gold__title">
-          Simple, Transparent <span>Pricing</span>
-        </h2>
-        <p class="gold__desc">
-          No hidden fees. No per-order commissions. Just flat monthly plans. Start with a 14-day free trial — no credit card required.
-        </p>
-        <div class="gold__highlight">
-          <span class="gold__percent">₹2,499</span>
-          <span class="gold__highlight-text">/month for growing<br />restaurants &amp; multi-staff ops</span>
+  <!-- Section 3: Pricing (Gold-style) -->
+  <!-- Curved top edge (sits in white area above) -->
+  <div class="pricing-gold__curve-top">
+    <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+      <path d="M0 0 Q720 120 1440 0 V120 H0 Z" fill="black" />
+    </svg>
+  </div>
+
+  <section class="pricing-gold" id="pricing">
+    <!-- Floating coin decorations -->
+    <div class="pricing-gold__coin pricing-gold__coin--1">
+      <img src="images/gold_coin.png" alt="" width="70" height="70" />
+    </div>
+    <div class="pricing-gold__coin pricing-gold__coin--2">
+      <img src="images/gold_coin.png" alt="" width="55" height="55" />
+    </div>
+
+    <!-- Main content -->
+    <div class="pricing-gold__inner">
+      <!-- Brand -->
+      <span class="pricing-gold__brand-name">tablekard</span>
+      <h2 class="pricing-gold__logo-text">
+        <svg class="pricing-gold__crown" width="42" height="36" viewBox="0 0 42 36" fill="url(#crownGrad)">
+          <path d="M4 28L0 8l12 10L21 2l9 16 12-10-4 20H4z" />
+          <rect x="4" y="30" width="34" height="5" rx="2" />
+          <defs>
+            <linearGradient id="crownGrad" x1="0" y1="0" x2="42" y2="36">
+              <stop offset="0%" stop-color="#f0d27a" />
+              <stop offset="50%" stop-color="#d4a44a" />
+              <stop offset="100%" stop-color="#a67c2e" />
+            </linearGradient>
+          </defs>
+        </svg>
+        PR<span class="pricing-gold__o">O</span>
+      </h2>
+      <p class="pricing-gold__tagline">
+        India's <strong>Top Value Plan</strong><br>for <strong>Restaurant Owners</strong>
+      </p>
+
+      <!-- Benefits label -->
+      <div class="pricing-gold__benefits-label">★ PRO BENEFITS ★</div>
+
+      <!-- Benefits row -->
+      <div class="pricing-gold__benefits">
+        <div class="pricing-gold__benefit">
+          <div class="pricing-gold__benefit-icon">💰</div>
+          <div class="pricing-gold__benefit-text">
+            <strong>₹2,499/month</strong>
+            <span>Flat pricing, no commissions</span>
+          </div>
         </div>
-        <a href="#download" class="btn btn--white">Start Free Trial</a>
-      </div>
-      <div class="gold__card">
-        <div class="gold__card-header">
-          <span class="gold__card-logo">PRO</span>
-          <span class="gold__card-tag">Recommended</span>
-        </div>
-        <div class="gold__perks">
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>Unlimited menu items &amp; tables</span>
-          </div>
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>QR ordering + online payments via Razorpay</span>
-          </div>
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>Advanced analytics &amp; real-time notifications</span>
-          </div>
-          <div class="gold__perk">
-            <span class="gold__perk-icon">✓</span>
-            <span>5 staff accounts + custom branding</span>
+        <div class="pricing-gold__benefit">
+          <div class="pricing-gold__benefit-icon">📲</div>
+          <div class="pricing-gold__benefit-text">
+            <strong>Unlimited QR Orders</strong>
+            <span>Seamless dine-in experience</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Geometric pattern overlay -->
+    <div class="pricing-gold__pattern"></div>
   </section>
+
+  <!-- Curved bottom edge (sits in white area below) -->
+  <div class="pricing-gold__curve-bottom">
+    <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none">
+      <path d="M0 100 Q720 0 1440 100 V0 H0 Z" fill="black" />
+    </svg>
+  </div>
 
   <!-- Section 4: The Tablekard Ecosystem -->
   <section id="ecosystem" style="
@@ -460,17 +523,22 @@
     font-family: 'Outfit', sans-serif;
   ">
     <!-- Decorative blobs -->
-    <div style="position:absolute;top:-100px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(139,58,26,0.05) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
-    <div style="position:absolute;bottom:-80px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(139,58,26,0.04) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
+    <div
+      style="position:absolute;top:-100px;left:-150px;width:500px;height:500px;background:radial-gradient(circle,rgba(139,58,26,0.05) 0%,transparent 70%);border-radius:50%;pointer-events:none;">
+    </div>
+    <div
+      style="position:absolute;bottom:-80px;right:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(139,58,26,0.04) 0%,transparent 70%);border-radius:50%;pointer-events:none;">
+    </div>
 
     <!-- Heading -->
     <div style="text-align:center;margin-bottom:64px;position:relative;z-index:2;">
 
       <h2 style="font-size:clamp(30px,5vw,50px);font-weight:800;color:#1a1a1a;margin:0 0 14px;line-height:1.15;">
-        Everything works <span style="color:#8B3A1A;">together,</span><br/>seamlessly.
+        Everything works <span style="color:#8B3A1A;">together,</span><br />seamlessly.
       </h2>
       <p style="font-size:clamp(14px,1.8vw,17px);color:#6C6C75;max-width:500px;margin:0 auto;line-height:1.75;">
-        When a customer places an order, it instantly appears in the Kitchen App — while your Admin Panel gives you full oversight of everything.
+        When a customer places an order, it instantly appears in the Kitchen App — while your Admin Panel gives you full
+        oversight of everything.
       </p>
     </div>
 
@@ -480,48 +548,56 @@
       <div style="display:flex;align-items:flex-start;justify-content:center;gap:0;margin-bottom:0;" id="eco-top-row">
 
         <!-- QR Scan Animation block: card + inline arrow -->
-        <div id="qr-anim-block" style="display:flex;flex-direction:row;align-items:center;gap:14px;margin-right:4px;margin-top:190px;">
+        <div id="qr-anim-block"
+          style="display:flex;flex-direction:row;align-items:center;gap:14px;margin-right:4px;margin-top:190px;">
           <!-- QR Card -->
-          <div style="background:#fff;border-radius:16px;padding:14px;box-shadow:0 8px 32px rgba(139,58,26,0.12);border:1.5px solid rgba(139,58,26,0.15);text-align:center;width:110px;flex-shrink:0;">
-            <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto 8px;">
-              <rect x="2" y="2" width="28" height="28" rx="3" fill="none" stroke="#8B3A1A" stroke-width="2.5"/>
-              <rect x="8" y="8" width="16" height="16" rx="1" fill="#8B3A1A"/>
-              <rect x="52" y="2" width="28" height="28" rx="3" fill="none" stroke="#8B3A1A" stroke-width="2.5"/>
-              <rect x="58" y="8" width="16" height="16" rx="1" fill="#8B3A1A"/>
-              <rect x="2" y="52" width="28" height="28" rx="3" fill="none" stroke="#8B3A1A" stroke-width="2.5"/>
-              <rect x="8" y="58" width="16" height="16" rx="1" fill="#8B3A1A"/>
-              <rect x="36" y="2" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="44" y="2" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="10" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="44" y="18" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="26" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="36" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="44" y="36" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="52" y="36" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="60" y="36" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="68" y="36" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="44" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="52" y="44" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="68" y="44" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="52" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="44" y="52" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="60" y="52" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="60" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="52" y="60" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="68" y="60" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="36" y="68" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="44" y="68" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <rect x="60" y="68" width="6" height="6" rx="1" fill="#1a1a1a"/>
-              <line id="qr-scan-line" x1="2" y1="41" x2="80" y2="41" stroke="#8B3A1A" stroke-width="1.5" stroke-dasharray="4 2" opacity="0.7"/>
+          <div
+            style="background:#fff;border-radius:16px;padding:14px;box-shadow:0 8px 32px rgba(139,58,26,0.12);border:1.5px solid rgba(139,58,26,0.15);text-align:center;width:110px;flex-shrink:0;">
+            <svg width="82" height="82" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg"
+              style="display:block;margin:0 auto 8px;">
+              <rect x="2" y="2" width="28" height="28" rx="3" fill="none" stroke="#8B3A1A" stroke-width="2.5" />
+              <rect x="8" y="8" width="16" height="16" rx="1" fill="#8B3A1A" />
+              <rect x="52" y="2" width="28" height="28" rx="3" fill="none" stroke="#8B3A1A" stroke-width="2.5" />
+              <rect x="58" y="8" width="16" height="16" rx="1" fill="#8B3A1A" />
+              <rect x="2" y="52" width="28" height="28" rx="3" fill="none" stroke="#8B3A1A" stroke-width="2.5" />
+              <rect x="8" y="58" width="16" height="16" rx="1" fill="#8B3A1A" />
+              <rect x="36" y="2" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="44" y="2" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="10" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="44" y="18" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="26" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="36" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="44" y="36" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="52" y="36" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="60" y="36" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="68" y="36" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="44" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="52" y="44" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="68" y="44" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="52" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="44" y="52" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="60" y="52" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="60" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="52" y="60" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="68" y="60" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="36" y="68" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="44" y="68" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <rect x="60" y="68" width="6" height="6" rx="1" fill="#1a1a1a" />
+              <line id="qr-scan-line" x1="2" y1="41" x2="80" y2="41" stroke="#8B3A1A" stroke-width="1.5"
+                stroke-dasharray="4 2" opacity="0.7" />
             </svg>
-            <span style="font-size:9px;font-weight:700;color:#8B3A1A;letter-spacing:0.06em;text-transform:uppercase;">Scan QR</span>
+            <span
+              style="font-size:9px;font-weight:700;color:#8B3A1A;letter-spacing:0.06em;text-transform:uppercase;">Scan
+              QR</span>
           </div>
           <!-- Horizontal arrow from QR to Customer Phone -->
           <div id="qr-arrow" style="position:relative;display:flex;align-items:center;margin-top:6px;">
-            <span style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:8px;font-weight:800;color:#8B3A1A;letter-spacing:0.07em;text-transform:uppercase;white-space:nowrap;">Opens App</span>
+            <span
+              style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:8px;font-weight:800;color:#8B3A1A;letter-spacing:0.07em;text-transform:uppercase;white-space:nowrap;">Opens
+              App</span>
             <svg width="110" height="18" viewBox="0 0 110 18" fill="none">
-              <line x1="0" y1="9" x2="94" y2="9" stroke="#8B3A1A" stroke-width="2" stroke-dasharray="5 3"/>
-              <polygon points="90,3 106,9 90,15" fill="#8B3A1A"/>
+              <line x1="0" y1="9" x2="94" y2="9" stroke="#8B3A1A" stroke-width="2" stroke-dasharray="5 3" />
+              <polygon points="90,3 106,9 90,15" fill="#8B3A1A" />
             </svg>
           </div>
         </div>
@@ -529,84 +605,127 @@
         <!-- Customer App -->
         <div id="customer-app-col" style="display:flex;flex-direction:column;align-items:center;">
           <!-- Label -->
-          <div style="display:inline-flex;align-items:center;gap:8px;background:#8B3A1A;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <div
+            style="display:inline-flex;align-items:center;gap:8px;background:#8B3A1A;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" />
+            </svg>
             Customer Web App
           </div>
           <!-- Phone device — fixed aspect ratio 1:2 -->
           <div style="position:relative;width:250px;height:500px;flex-shrink:0;">
             <!-- Outer bezel -->
-            <div style="position:absolute;inset:0;background:linear-gradient(155deg,#3a3a3a,#181818);border-radius:40px;box-shadow:0 32px 64px rgba(0,0,0,0.3),0 8px 20px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.12);"></div>
+            <div
+              style="position:absolute;inset:0;background:linear-gradient(155deg,#3a3a3a,#181818);border-radius:40px;box-shadow:0 32px 64px rgba(0,0,0,0.3),0 8px 20px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.12);">
+            </div>
             <!-- Pill notch -->
-            <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:52px;height:6px;background:#0a0a0a;border-radius:3px;z-index:10;"></div>
+            <div
+              style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:52px;height:6px;background:#0a0a0a;border-radius:3px;z-index:10;">
+            </div>
             <!-- Screen area — perfect inset -->
-            <div style="position:absolute;top:10px;left:8px;right:8px;bottom:10px;border-radius:32px;overflow:hidden;z-index:5;background:#fff;">
-              <img src="images/screenshot_customer.jpg" alt="Customer App" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+            <div
+              style="position:absolute;top:10px;left:8px;right:8px;bottom:10px;border-radius:32px;overflow:hidden;z-index:5;background:#fff;">
+              <img src="images/screenshot_customer.jpg" alt="Customer App"
+                style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
             </div>
             <!-- Home bar -->
-            <div style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:36px;height:3px;background:rgba(255,255,255,0.35);border-radius:2px;z-index:10;"></div>
+            <div
+              style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:36px;height:3px;background:rgba(255,255,255,0.35);border-radius:2px;z-index:10;">
+            </div>
           </div>
           <!-- Info card -->
-          <div style="margin-top:20px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 6px 24px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);text-align:center;width:230px;">
+          <div
+            style="margin-top:20px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 6px 24px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);text-align:center;width:230px;">
             <p style="margin:0 0 5px;font-size:14px;font-weight:700;color:#1a1a1a;">Customer Web App</p>
-            <p style="margin:0;font-size:11px;color:#888;line-height:1.6;white-space:nowrap;">Scan QR &rarr; Browse &rarr; Order &rarr; Pay</p>
+            <p style="margin:0;font-size:11px;color:#888;line-height:1.6;white-space:nowrap;">Scan QR &rarr; Browse
+              &rarr; Order &rarr; Pay</p>
           </div>
         </div>
 
         <!-- Arrow: Customer → Kitchen (direct) -->
-        <div id="mid-arrow" style="position:relative;display:flex;align-items:center;justify-content:center;padding:0 24px;flex-shrink:0;margin-top:240px;">
-          <span style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:800;color:#8B3A1A;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;">Order placed</span>
+        <div id="mid-arrow"
+          style="position:relative;display:flex;align-items:center;justify-content:center;padding:0 24px;flex-shrink:0;margin-top:240px;">
+          <span
+            style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:800;color:#8B3A1A;letter-spacing:0.08em;text-transform:uppercase;white-space:nowrap;">Order
+            placed</span>
           <svg width="150" height="20" viewBox="0 0 150 20" fill="none">
-            <line x1="2" y1="10" x2="134" y2="10" stroke="#8B3A1A" stroke-width="2" stroke-dasharray="6 4"/>
-            <polygon points="130,4 148,10 130,16" fill="#8B3A1A"/>
+            <line x1="2" y1="10" x2="134" y2="10" stroke="#8B3A1A" stroke-width="2" stroke-dasharray="6 4" />
+            <polygon points="130,4 148,10 130,16" fill="#8B3A1A" />
           </svg>
         </div>
 
         <!-- Kitchen App -->
         <div id="kitchen-app-col" style="display:flex;flex-direction:column;align-items:center;">
           <!-- Label -->
-          <div style="display:inline-flex;align-items:center;gap:8px;background:#8B3A1A;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          <div
+            style="display:inline-flex;align-items:center;gap:8px;background:#8B3A1A;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+              <line x1="6" y1="1" x2="6" y2="4" />
+              <line x1="10" y1="1" x2="10" y2="4" />
+              <line x1="14" y1="1" x2="14" y2="4" />
+            </svg>
             Kitchen Web App
           </div>
           <!-- Phone device — identical dimensions -->
           <div style="position:relative;width:250px;height:500px;flex-shrink:0;">
-            <div style="position:absolute;inset:0;background:linear-gradient(155deg,#3a3a3a,#181818);border-radius:40px;box-shadow:0 32px 64px rgba(0,0,0,0.3),0 8px 20px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.12);"></div>
-            <div style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:52px;height:6px;background:#0a0a0a;border-radius:3px;z-index:10;"></div>
-            <div style="position:absolute;top:10px;left:8px;right:8px;bottom:10px;border-radius:32px;overflow:hidden;z-index:5;background:#fff;">
-              <img src="images/screenshot_kitchen.jpg" alt="Kitchen App" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+            <div
+              style="position:absolute;inset:0;background:linear-gradient(155deg,#3a3a3a,#181818);border-radius:40px;box-shadow:0 32px 64px rgba(0,0,0,0.3),0 8px 20px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.12);">
             </div>
-            <div style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:36px;height:3px;background:rgba(255,255,255,0.35);border-radius:2px;z-index:10;"></div>
+            <div
+              style="position:absolute;top:14px;left:50%;transform:translateX(-50%);width:52px;height:6px;background:#0a0a0a;border-radius:3px;z-index:10;">
+            </div>
+            <div
+              style="position:absolute;top:10px;left:8px;right:8px;bottom:10px;border-radius:32px;overflow:hidden;z-index:5;background:#fff;">
+              <img src="images/screenshot_kitchen.jpg" alt="Kitchen App"
+                style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+            </div>
+            <div
+              style="position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:36px;height:3px;background:rgba(255,255,255,0.35);border-radius:2px;z-index:10;">
+            </div>
           </div>
           <!-- Info card -->
-          <div style="margin-top:20px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 6px 24px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);text-align:center;width:230px;">
+          <div
+            style="margin-top:20px;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 6px 24px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);text-align:center;width:230px;">
             <p style="margin:0 0 5px;font-size:14px;font-weight:700;color:#1a1a1a;">Kitchen Web App</p>
-            <p style="margin:0;font-size:11px;color:#888;line-height:1.6;white-space:nowrap;">Live order queue &middot; Manage &middot; Mark done</p>
+            <p style="margin:0;font-size:11px;color:#888;line-height:1.6;white-space:nowrap;">Live order queue &middot;
+              Manage &middot; Mark done</p>
           </div>
         </div>
 
       </div><!-- end top row -->
 
       <!-- V-shaped connector: both phones → MONITORED & MANAGED → Admin -->
-      <div id="connector-block" style="position:relative;margin-top:24px;margin-bottom:0;width:100%;max-width:800px;margin-left:auto;margin-right:auto;">
+      <div id="connector-block"
+        style="position:relative;margin-top:24px;margin-bottom:0;width:100%;max-width:800px;margin-left:auto;margin-right:auto;">
         <!-- SVG draws two curved lines from each phone down to the badge -->
-        <svg viewBox="0 0 800 100" preserveAspectRatio="xMidYMid meet" style="width:100%;display:block;overflow:visible;">
+        <svg viewBox="0 0 800 100" preserveAspectRatio="xMidYMid meet"
+          style="width:100%;display:block;overflow:visible;">
           <!-- Left branch from customer phone (approx center is 240) -->
-          <path d="M 240 0 C 240 70, 400 70, 400 70" stroke="#c0a898" stroke-width="1.8" stroke-dasharray="5 3" fill="none"/>
+          <path d="M 240 0 C 240 70, 400 70, 400 70" stroke="#c0a898" stroke-width="1.8" stroke-dasharray="5 3"
+            fill="none" />
           <!-- Right branch from kitchen phone (approx center is 560) -->
-          <path d="M 640 0 C 640 70, 400 70, 400 70" stroke="#c0a898" stroke-width="1.8" stroke-dasharray="5 3" fill="none"/>
+          <path d="M 640 0 C 640 70, 400 70, 400 70" stroke="#c0a898" stroke-width="1.8" stroke-dasharray="5 3"
+            fill="none" />
           <!-- Arrow pointing down to admin -->
-          <polygon points="395,72 400,82 405,72" fill="#c0a898"/>
+          <polygon points="395,72 400,82 405,72" fill="#c0a898" />
         </svg>
         <!-- Monitored badge centred over arrow tip -->
-        <div style="position:absolute;top:54px;left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid rgba(139,58,26,0.2);border-radius:50px;padding:7px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);white-space:nowrap;z-index:3;">
-          <span style="font-size:10px;font-weight:800;color:#8B3A1A;letter-spacing:0.07em;text-transform:uppercase;">Monitored &amp; Managed</span>
+        <div
+          style="position:absolute;top:54px;left:50%;transform:translateX(-50%);background:#fff;border:1.5px solid rgba(139,58,26,0.2);border-radius:50px;padding:7px 20px;box-shadow:0 4px 20px rgba(0,0,0,0.08);white-space:nowrap;z-index:3;">
+          <span
+            style="font-size:10px;font-weight:800;color:#8B3A1A;letter-spacing:0.07em;text-transform:uppercase;">Monitored
+            &amp; Managed</span>
         </div>
         <!-- Downward arrow from badge to laptop -->
         <div style="display:flex;justify-content:center;margin-top:8px;">
           <svg width="20" height="38" viewBox="0 0 20 38" fill="none">
-            <line x1="10" y1="0" x2="10" y2="30" stroke="#c0a898" stroke-width="1.8" stroke-dasharray="4 3"/>
-            <polygon points="5,28 10,38 15,28" fill="#c0a898"/>
+            <line x1="10" y1="0" x2="10" y2="30" stroke="#c0a898" stroke-width="1.8" stroke-dasharray="4 3" />
+            <polygon points="5,28 10,38 15,28" fill="#c0a898" />
           </svg>
         </div>
       </div>
@@ -614,32 +733,45 @@
       <!-- BOTTOM: Admin Laptop — full width -->
       <div id="admin-block" style="display:flex;flex-direction:column;align-items:center;">
         <!-- Label -->
-        <div style="display:inline-flex;align-items:center;gap:8px;background:#2D3748;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <div
+          style="display:inline-flex;align-items:center;gap:8px;background:#2D3748;color:#fff;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:7px 18px;border-radius:50px;margin-bottom:18px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+            <line x1="8" y1="21" x2="16" y2="21" />
+            <line x1="12" y1="17" x2="12" y2="21" />
+          </svg>
           Restaurant Admin
         </div>
         <!-- Laptop frame -->
         <div style="width:100%;max-width:700px;">
           <!-- Screen bezel -->
-          <div style="background:linear-gradient(145deg,#2e2e2e,#1a1a1a);border-radius:14px 14px 0 0;padding:12px 12px 8px;box-shadow:0 -2px 20px rgba(0,0,0,0.12);">
+          <div
+            style="background:linear-gradient(145deg,#2e2e2e,#1a1a1a);border-radius:14px 14px 0 0;padding:12px 12px 8px;box-shadow:0 -2px 20px rgba(0,0,0,0.12);">
             <!-- Webcam dot -->
             <div style="width:6px;height:6px;background:#3a3a3a;border-radius:50%;margin:0 auto 8px;"></div>
             <!-- Screenshot -->
             <div style="border-radius:8px;overflow:hidden;background:#fff;width:100%;">
-              <img src="images/screenshot_admin.jpg" alt="Admin Dashboard" style="width:100%;height:auto;display:block;">
+              <img src="images/screenshot_admin.jpg" alt="Admin Dashboard"
+                style="width:100%;height:auto;display:block;">
             </div>
           </div>
           <!-- Hinge -->
           <div style="height:5px;background:linear-gradient(90deg,#111,#444,#111);"></div>
           <!-- Keyboard base -->
-          <div style="background:linear-gradient(180deg,#cfcfcf,#b8b8b8);border-radius:0 0 10px 10px;height:22px;position:relative;box-shadow:0 10px 40px rgba(0,0,0,0.2);">
-            <div style="position:absolute;top:5px;left:50%;transform:translateX(-50%);width:80px;height:10px;background:rgba(0,0,0,0.08);border-radius:4px;"></div>
+          <div
+            style="background:linear-gradient(180deg,#cfcfcf,#b8b8b8);border-radius:0 0 10px 10px;height:22px;position:relative;box-shadow:0 10px 40px rgba(0,0,0,0.2);">
+            <div
+              style="position:absolute;top:5px;left:50%;transform:translateX(-50%);width:80px;height:10px;background:rgba(0,0,0,0.08);border-radius:4px;">
+            </div>
           </div>
         </div>
         <!-- Info card -->
-        <div style="margin-top:22px;background:#fff;border-radius:18px;padding:14px 24px;box-shadow:0 6px 24px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);text-align:center;max-width:440px;">
+        <div
+          style="margin-top:22px;background:#fff;border-radius:18px;padding:14px 24px;box-shadow:0 6px 24px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.05);text-align:center;max-width:440px;">
           <p style="margin:0 0 5px;font-size:14px;font-weight:700;color:#1a1a1a;">Restaurant Admin Panel</p>
-          <p style="margin:0;font-size:11px;color:#888;line-height:1.6;">Full oversight &middot; Orders &middot; Tables &middot; Payments &middot; Analytics &middot; Menu management</p>
+          <p style="margin:0;font-size:11px;color:#888;line-height:1.6;">Full oversight &middot; Orders &middot; Tables
+            &middot; Payments &middot; Analytics &middot; Menu management</p>
         </div>
       </div><!-- end admin -->
 
@@ -647,35 +779,49 @@
 
     <style>
       @keyframes qr-scan {
-        0%   { transform: translateY(-30px); opacity: 0.6; }
-        50%  { transform: translateY(30px);  opacity: 1;   }
-        100% { transform: translateY(-30px); opacity: 0.6; }
+        0% {
+          transform: translateY(-30px);
+          opacity: 0.6;
+        }
+
+        50% {
+          transform: translateY(30px);
+          opacity: 1;
+        }
+
+        100% {
+          transform: translateY(-30px);
+          opacity: 0.6;
+        }
       }
-      #qr-scan-line { animation: qr-scan 2s ease-in-out infinite; }
+
+      #qr-scan-line {
+        animation: qr-scan 2s ease-in-out infinite;
+      }
     </style>
 
     <script>
-    (function() {
-      function showAll() {
-        var ids = ['customer-app-col','kitchen-app-col','qr-anim-block','qr-arrow','mid-arrow','connector-block','admin-block'];
-        ids.forEach(function(id) {
-          var el = document.getElementById(id);
-          if (!el) return;
-          el.style.opacity = '1';
-          el.style.transform = 'none';
-        });
-      }
-      var section = document.getElementById('ecosystem');
-      if (!section) { showAll(); return; }
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function(entries) {
-          if (entries[0].isIntersecting) { showAll(); io.disconnect(); }
-        }, { threshold: 0.1 });
-        io.observe(section);
-      } else {
-        showAll();
-      }
-    })();
+      (function () {
+        function showAll() {
+          var ids = ['customer-app-col', 'kitchen-app-col', 'qr-anim-block', 'qr-arrow', 'mid-arrow', 'connector-block', 'admin-block'];
+          ids.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          });
+        }
+        var section = document.getElementById('ecosystem');
+        if (!section) { showAll(); return; }
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (entries) {
+            if (entries[0].isIntersecting) { showAll(); io.disconnect(); }
+          }, { threshold: 0.1 });
+          io.observe(section);
+        } else {
+          showAll();
+        }
+      })();
     </script>
 
   </section>
@@ -713,57 +859,18 @@
           <span>Setup takes under 10 minutes</span>
         </h2>
         <p class="hyperpure__desc">
-          Get your restaurant running on Tablekard with our guided setup wizard. From sign-up to your first QR order — it's faster than you think.
+          Get your restaurant running on Tablekard with our guided setup wizard. From sign-up to your first QR order —
+          it's faster than you think.
         </p>
         <a href="#download" class="btn btn--primary">Start Free Trial →</a>
       </div>
       <div class="hyperpure__visual">
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">🏪</div>
-          <span><strong>1.</strong> Create Your Restaurant</span>
-        </div>
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">📋</div>
-          <span><strong>2.</strong> Add Your Menu</span>
-        </div>
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">📲</div>
-          <span><strong>3.</strong> Print QR Codes &amp; Go Live</span>
-        </div>
-        <div class="hyperpure__item">
-          <div class="hyperpure__item-icon">🎉</div>
-          <span>Customers scan &amp; order instantly</span>
-        </div>
+        <img src="images/scan_qr_table.png" alt="Scanning QR code at table"
+          style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.12);" />
       </div>
     </div>
   </section>
 
-  <!-- Mission -->
-  <section class="mission">
-    <div class="container">
-      <h2 class="mission__title">Smart QR ordering for modern restaurants</h2>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="section download" id="download">
-    <div class="container">
-      <h2 class="download__title">Ready to Transform Your Restaurant?</h2>
-      <p class="download__subtitle">
-        Join hundreds of restaurants already using Tablekard to deliver faster service,<br />
-        eliminate errors, and delight their customers.
-      </p>
-      <div class="download__grid">
-        <div class="download__qr">
-          <canvas id="qr-code" aria-label="QR code demo"></canvas>
-        </div>
-        <div class="download__stores">
-          <a href="#" class="btn btn--white btn--lg">Start Your Free 14-Day Trial →</a>
-          <p class="download__note">No credit card required · Setup in 10 minutes · Cancel anytime</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Premium Footer -->
   <footer class="footer">
@@ -771,56 +878,79 @@
       <div class="footer__top">
         <div class="footer__brand-col">
           <div class="footer__logo">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color:#8B3A1A;"><path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round" style="color:#8B3A1A;">
+              <path d="M3 9h18v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9Z" />
+              <path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9" />
+              <path d="M12 3v6" />
+            </svg>
             <span class="logo__text" style="margin-left:10px;font-size:1.8rem;color:#fff;">Tablekard</span>
           </div>
-          <p class="footer__desc">Smart QR ordering and comprehensive management for modern restaurants. Turn every table into a seamless self-service experience.</p>
+          <p class="footer__desc">Smart QR ordering and comprehensive management for modern restaurants. Turn every
+            table into a seamless self-service experience.</p>
           <div class="footer__contact-info">
             <a href="mailto:hello@tablekard.com">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" ry="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
               hello@tablekard.com
             </a>
             <a href="tel:+919876543210">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
               +91 98765 43210
             </a>
           </div>
           <div class="footer__socials">
             <a href="#" aria-label="Twitter">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
             </a>
             <a href="#" aria-label="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 114.126 0 2.063 2.063 0 01-2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
             </a>
             <a href="#" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg>
             </a>
           </div>
         </div>
         <div class="footer__links-col">
           <h4>Product</h4>
           <ul>
-            <li><a href="#features">Digital QR Menu</a></li>
-            <li><a href="#features">Kitchen Display System</a></li>
-            <li><a href="#features">Admin Dashboard</a></li>
-            <li><a href="#features">Payments &amp; Analytics</a></li>
-            <li><a href="#pricing">Pricing Plans</a></li>
-          </ul>
-        </div>
-        <div class="footer__links-col">
-          <h4>Resources</h4>
-          <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Video Tutorials</a></li>
-            <li><a href="#">Restaurant Blog</a></li>
-            <li><a href="#">Case Studies</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#">Demo</a></li>
           </ul>
         </div>
         <div class="footer__links-col">
           <h4>Company</h4>
           <ul>
             <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Blog (Coming Soon)</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__links-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Status Page</a></li>
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms of Service</a></li>
           </ul>
@@ -828,7 +958,7 @@
       </div>
       <div class="footer__bottom">
         <div class="footer__copyright">
-          &copy; 2026 Tablekard. Built by GrowTez.
+          &copy; 2026 Tablekard by GrowTez. All rights reserved.
         </div>
         <div class="footer__badges">
           Made with ❤️ for Restaurants
@@ -839,4 +969,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
