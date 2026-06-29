@@ -521,17 +521,9 @@ ul {
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.12));
 }
 
-.hero-v2__float--leaf {
-  width: 65px;
-  top: 14%;
-  left: 48%;
-  transform: rotate(15deg);
-  animation: floatSlow 4s ease-in-out infinite;
-}
-
 .hero-v2__float--burger {
   width: clamp(160px, 18vw, 280px);
-  top: 25%;
+  top: 40%;
   left: 3%;
   animation: floatSlow 5s ease-in-out infinite;
   animation-delay: 0.5s;
@@ -553,31 +545,13 @@ ul {
   animation-delay: 0.3s;
 }
 
-.hero-v2__float--tomato1 {
-  width: 65px;
-  bottom: 22%;
-  left: 4%;
-  transform: rotate(-20deg);
-  animation: floatSlow 3.5s ease-in-out infinite;
-  animation-delay: 0.7s;
-}
-
-.hero-v2__float--tomato2 {
-  width: 55px;
-  top: 50%;
-  right: 25%;
-  transform: rotate(30deg);
-  animation: floatSlow 4s ease-in-out infinite;
-  animation-delay: 1.2s;
-}
-
-.hero-v2__float--tomato3 {
-  width: 50px;
-  bottom: 12%;
-  right: 35%;
+.hero-v2__float--qr-scan {
+  width: clamp(140px, 15vw, 220px);
+  top: 10%;
+  left: 8%;
   transform: rotate(-10deg);
-  animation: floatSlow 3.8s ease-in-out infinite;
-  animation-delay: 0.4s;
+  animation: floatSlow 4.5s ease-in-out infinite;
+  animation-delay: 0.7s;
 }
 
 @keyframes floatSlow {
@@ -712,8 +686,7 @@ ul {
     width: clamp(110px, 14vw, 170px);
   }
 
-  .hero-v2__float--tomato2,
-  .hero-v2__float--tomato3 {
+  .hero-v2__float--qr-scan {
     display: none;
   }
 
@@ -732,10 +705,7 @@ ul {
   .hero-v2__float--burger,
   .hero-v2__float--dumplings,
   .hero-v2__float--pizza,
-  .hero-v2__float--tomato1,
-  .hero-v2__float--tomato2,
-  .hero-v2__float--tomato3,
-  .hero-v2__float--leaf {
+  .hero-v2__float--qr-scan {
     display: none;
   }
 
