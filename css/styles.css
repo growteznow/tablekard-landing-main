@@ -80,6 +80,7 @@ ul {
   right: 0;
   z-index: 1000;
   background: rgba(174, 72, 0, 0.674);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(187, 187, 187, 0.1);
   transition: box-shadow var(--transition);
@@ -915,6 +916,7 @@ ul {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
   padding: 40px;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -1629,5 +1631,283 @@ ul {
 
   .hyperpure__visual {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Registration Offer Section ─── */
+.registration-offer {
+  padding: 80px 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.registration-offer .container {
+  width: min(1400px, 96vw);
+}
+
+.registration-card {
+  background: rgba(139, 58, 26, 0.10);
+  border: 2px solid rgba(139, 58, 26, 0.40);
+  border-radius: 40px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 32px 64px rgba(139, 58, 26, 0.15);
+}
+
+.registration-card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.registration-offer__grid {
+  display: grid;
+  grid-template-columns: 3.5fr 6.5fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Offer Details (Left) */
+.offer-details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.offer-badge {
+  display: inline-block;
+  background: rgba(139, 58, 26, 0.1);
+  color: #8B3A1A;
+  border: 1px solid rgba(139, 58, 26, 0.2);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
+.offer-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #1a1a1a;
+}
+
+.offer-desc {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.offer-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.highlight-item .highlight-icon {
+  width: 28px;
+  height: 28px;
+  color: #8B3A1A;
+  background: rgba(139, 58, 26, 0.1);
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.highlight-item strong {
+  color: #8B3A1A;
+  font-weight: 700;
+}
+
+/* Countdown Timer */
+.offer-timer-wrapper {
+  margin-top: 24px;
+  background: #fff;
+  border: 1px solid rgba(139, 58, 26, 0.1);
+  padding: 24px;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 8px 32px rgba(139, 58, 26, 0.05);
+}
+
+.timer-label {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #666;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.time-box {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75px;
+  min-width: 75px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.time-num {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  font-variant-numeric: tabular-nums;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.time-text {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.time-colon {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8B3A1A;
+  margin-top: -15px;
+}
+
+/* Form Details (Right) */
+.offer-form-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.offer-form-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.15);
+  color: #1a1a1a;
+  position: relative;
+}
+
+.offer-form-card::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: linear-gradient(135deg, #f0d27a, #8B3A1A);
+  z-index: -1;
+  border-radius: 26px;
+}
+
+.offer-form-card h3 {
+  font-size: 1.8rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+}
+
+.offer-form-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+.registration-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-form label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.registration-form input {
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.registration-form input:focus {
+  outline: none;
+  border-color: #8B3A1A;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(139, 58, 26, 0.1);
+}
+
+.btn--submit-form {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #8B3A1A, #662A12);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(139, 58, 26, 0.3);
+  color: white;
+}
+
+.btn--submit-form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(139, 58, 26, 0.4);
+}
+
+@media (max-width: 900px) {
+  .registration-offer__grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .registration-card {
+    padding: 32px 20px;
+    border-radius: 24px;
+  }
+  .offer-form-wrapper {
+    justify-content: center;
+  }
+  .countdown-timer {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
