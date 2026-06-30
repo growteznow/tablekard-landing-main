@@ -20,10 +20,16 @@
   <script src="https://unpkg.com/libphonenumber-js@1.10.44/bundle/libphonenumber-max.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛶</text></svg>" />
 </head>
 
 <body>
+
+  <!-- Full Page Preloader -->
+  <div id="site-preloader" class="preloader">
+    <div class="preloader__spinner"></div>
+    <p class="preloader__text">Loading Tablekard...</p>
+  </div>
 
   <!-- Navigation Header -->
   <header class="navbar">
@@ -46,7 +52,7 @@
     <!-- Dark overlay for text contrast -->
     <div class="video-preview-overlay"></div>
 
-    <video autoplay loop muted playsinline preload="auto">
+    <video id="bg-video" autoplay loop muted playsinline preload="auto">
       <source src="images/background.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -60,6 +66,33 @@
       </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const video = document.getElementById('bg-video');
+      const preloader = document.getElementById('site-preloader');
+      if (preloader) {
+        let isLoaded = false;
+        const hidePreloader = () => {
+          if (!isLoaded) {
+            isLoaded = true;
+            preloader.classList.add('preloader--hidden');
+          }
+        };
+        if (video) {
+          video.addEventListener('playing', hidePreloader);
+          video.addEventListener('canplaythrough', hidePreloader);
+          if (video.readyState >= 3) {
+            hidePreloader();
+          }
+        } else {
+          hidePreloader();
+        }
+        // Safety timeout fallback (4 seconds)
+        setTimeout(hidePreloader, 4000);
+      }
+    });
+  </script>
 
 
   <!-- Hero -->
