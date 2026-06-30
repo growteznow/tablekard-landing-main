@@ -971,213 +971,7 @@ ul {
   font-weight: 700;
 }
 
-/* ─── Pricing Gold (Zomato Gold-style) ─── */
-.pricing-gold {
-  position: relative;
-  background: black;
-  padding: 0;
-  overflow: hidden;
-}
 
-.pricing-gold__curve-top {
-  position: relative;
-  z-index: 2;
-  margin-bottom: -2px;
-}
-
-.pricing-gold__curve-top svg {
-  display: block;
-  width: 100%;
-  height: 120px;
-}
-
-.pricing-gold__curve-bottom {
-  position: relative;
-  z-index: 2;
-  margin-top: -2px;
-}
-
-.pricing-gold__curve-bottom svg {
-  display: block;
-  width: 100%;
-  height: 100px;
-}
-
-/* Floating coins */
-.pricing-gold__coin {
-  position: absolute;
-  z-index: 3;
-  animation: coinFloat 4s ease-in-out infinite;
-}
-
-.pricing-gold__coin--1 {
-  top: 60px;
-  left: 3%;
-  animation-delay: 0s;
-}
-
-.pricing-gold__coin--2 {
-  top: 50px;
-  right: 3%;
-  animation-delay: 1.5s;
-}
-
-@keyframes coinFloat {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-12px) rotate(10deg);
-  }
-}
-
-/* Inner content */
-.pricing-gold__inner {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 20px 20px 40px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.pricing-gold__brand-name {
-  display: block;
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
-}
-
-.pricing-gold__logo-text {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(4rem, 10vw, 7rem);
-  font-weight: 900;
-  background: linear-gradient(135deg, #f0d27a 0%, #d4a44a 40%, #a67c2e 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1;
-  margin-bottom: 12px;
-  letter-spacing: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-}
-
-.pricing-gold__crown {
-  flex-shrink: 0;
-  margin-top: -10px;
-}
-
-.pricing-gold__o {
-  display: inline-block;
-}
-
-.pricing-gold__tagline {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
-  color: #c9a96e;
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 32px;
-}
-
-.pricing-gold__tagline strong {
-  color: #f0d27a;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.pricing-gold__benefits-label {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: #f0d27a;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 28px;
-}
-
-.pricing-gold__benefits {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  flex-wrap: wrap;
-}
-
-.pricing-gold__benefit {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.pricing-gold__benefit-icon {
-  font-size: 2.2rem;
-  flex-shrink: 0;
-}
-
-.pricing-gold__benefit-text {
-  text-align: left;
-}
-
-.pricing-gold__benefit-text strong {
-  display: block;
-  font-size: 1.05rem;
-  color: #ffffff;
-  font-weight: 700;
-}
-
-.pricing-gold__benefit-text span {
-  font-size: 0.85rem;
-  color: #c9a96e;
-}
-
-/* Geometric pattern */
-.pricing-gold__pattern {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 45%;
-  z-index: 1;
-  opacity: 0.08;
-  background-image:
-    repeating-linear-gradient(60deg, transparent, transparent 30px, rgba(212, 164, 74, 0.3) 30px, rgba(212, 164, 74, 0.3) 31px),
-    repeating-linear-gradient(-60deg, transparent, transparent 30px, rgba(212, 164, 74, 0.3) 30px, rgba(212, 164, 74, 0.3) 31px);
-  pointer-events: none;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .pricing-gold__curve-top svg {
-    height: 60px;
-  }
-
-  .pricing-gold__curve-bottom svg {
-    height: 50px;
-  }
-
-  .pricing-gold__coin {
-    display: none;
-  }
-
-  .pricing-gold__benefits {
-    flex-direction: column;
-    gap: 24px;
-    align-items: center;
-  }
-
-  .pricing-gold__logo-text {
-    letter-spacing: 3px;
-  }
-}
 
 .partners {
   background: var(--z-grey-100);
@@ -1649,7 +1443,7 @@ ul {
 .registration-card {
   background: rgba(139, 58, 26, 0.10);
   border: 2px solid rgba(139, 58, 26, 0.40);
-  border-radius: 40px;
+  border-radius: 16px; /* Less round corners */
   padding: 60px;
   position: relative;
   overflow: hidden;
@@ -1901,7 +1695,7 @@ ul {
   }
   .registration-card {
     padding: 32px 20px;
-    border-radius: 24px;
+    border-radius: 12px; /* Less round on mobile */
   }
   .offer-form-wrapper {
     justify-content: center;
@@ -1909,5 +1703,252 @@ ul {
   .countdown-timer {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+/* ─── Video Preview Section ─── */
+.video-preview-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-top: 80px; /* Push down below the fixed 80px navbar */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-preview-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .video-preview-section {
+    height: 280px;
+  }
+}
+
+/* ─── Navigation Bar from Scratch ─── */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(139, 58, 26, 0.95); /* Same color as brand CTA buttons */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); /* Translucent white border */
+  transition: all 0.3s ease;
+}
+
+.navbar__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar__logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff; /* White logo text */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navbar__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.85); /* Highly legible soft white text */
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.navbar__link:hover {
+  color: #f0d27a; /* Gold accent on hover */
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f0d27a; /* Gold accent line */
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+  transform-origin: right;
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.btn-nav-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #ffffff; /* High contrast white button */
+  color: #8B3A1A; /* Brand brown text inside button */
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.btn-nav-cta:hover {
+  background: #281108; /* Dark brown on hover */
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .navbar__nav {
+    display: none;
+  }
+}
+
+/* ─── Video Overlay and Text Content ─── */
+.video-preview-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35); /* Light overlay so background is lighter */
+  z-index: 2;
+}
+
+.video-preview-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.video-preview-content {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+  color: #281108; /* Dark brown text for high legibility */
+  max-width: 650px;
+  margin-left: 40px; /* Add margin on the left */
+}
+
+.video-preview-subtitle {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8B3A1A; /* Dark brand color instead of gold */
+  margin-bottom: 16px;
+}
+
+.video-preview-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 28px;
+  color: #281108; /* Dark brown instead of white */
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.5); /* Soft light shadow */
+}
+
+.btn-video-cta {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #8B3A1A;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(139, 58, 26, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-video-cta:hover {
+  background: #a3441e;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 58, 26, 0.45);
+}
+
+@media (max-width: 768px) {
+  .video-preview-content {
+    margin-left: 16px; /* Less margin on small mobile viewports */
+  }
+}
+
+/* ─── Full Page Preloader ─── */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* Clean white background */
+  z-index: 10000; /* Stacks above navbar and everything else */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader__spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(139, 58, 26, 0.1);
+  border-top-color: #8B3A1A; /* Theme brand color */
+  border-radius: 50%;
+  animation: preloaderSpin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.preloader__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #8B3A1A; /* Brand brown text */
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.preloader--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@keyframes preloaderSpin {
+  to {
+    transform: rotate(360deg);
   }
 }
