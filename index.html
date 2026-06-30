@@ -820,7 +820,7 @@
               <p class="timer-label">Offer Expires In:</p>
               <div class="countdown-timer" id="offer-timer">
                 <div class="time-box">
-                  <span class="time-num" id="t-days">15</span>
+                  <span class="time-num" id="t-days">14</span>
                   <span class="time-text">Days</span>
                 </div>
                 <span class="time-colon">:</span>
@@ -1272,12 +1272,12 @@
   <script>
     (function () {
       function startTimer() {
-        var fifteenDays = 15 * 24 * 60 * 60 * 1000;
-        var storageKey = 'tablekard_offer_endtime';
+        var fourteenDays = 14 * 24 * 60 * 60 * 1000;
+        var storageKey = 'tablekard_offer_endtime_14d';
         var endTime = localStorage.getItem(storageKey);
 
-        if (!endTime) {
-          endTime = Date.now() + fifteenDays;
+        if (!endTime || isNaN(parseInt(endTime, 10))) {
+          endTime = Date.now() + fourteenDays;
           localStorage.setItem(storageKey, endTime);
         } else {
           endTime = parseInt(endTime, 10);
@@ -1288,9 +1288,9 @@
           var timeLeft = endTime - now;
 
           if (timeLeft <= 0) {
-            endTime = Date.now() + fifteenDays;
+            endTime = Date.now() + fourteenDays;
             localStorage.setItem(storageKey, endTime);
-            timeLeft = fifteenDays;
+            timeLeft = fourteenDays;
           }
 
           var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
