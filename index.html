@@ -13,7 +13,12 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <!-- Leaflet CSS and JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?v=2" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?v=2"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://unpkg.com/libphonenumber-js@1.10.44/bundle/libphonenumber-max.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📋</text></svg>" />
 </head>
@@ -831,44 +836,376 @@
 
 
 
-  <!-- Social proof / stats -->
-  <section class="section partners">
-    <div class="container">
-      <div class="partners__count">200+</div>
-      <p class="partners__label">restaurants already using Tablekard across India</p>
-      <div class="partners__logos">
-        <span class="partners__logo">Cafés</span>
-        <span class="partners__logo">Fine Dining</span>
-        <span class="partners__logo">Quick Service</span>
-        <span class="partners__logo">Cloud Kitchens</span>
-        <span class="partners__logo">Hotels</span>
-        <span class="partners__logo">Bars &amp; Pubs</span>
-        <span class="partners__logo">Food Courts</span>
-        <span class="partners__logo">Bakeries</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- How It Works -->
-  <section class="section hyperpure" id="how-it-works">
-    <div class="container hyperpure__grid">
-      <div class="hyperpure__content">
-        <p class="section__label">How It Works</p>
-        <h2 class="hyperpure__brand">
-          Go live in three simple steps
-          <span>Setup takes under 10 minutes</span>
-        </h2>
-        <p class="hyperpure__desc">
-          Get your restaurant running on Tablekard with our guided setup wizard. From sign-up to your first QR order —
-          it's faster than you think.
-        </p>
-        <a href="#download" class="btn btn--primary">Start Free Trial →</a>
+  <!-- Registration Offer Section -->
+  <section class="section registration-offer" id="register">
+    <div class="container">
+      <div class="registration-card">
+        <svg class="registration-card__bg" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <circle cx="200" cy="500" r="300" stroke="rgba(139, 58, 26, 0.25)" stroke-width="2" />
+          <circle cx="200" cy="500" r="450" stroke="rgba(139, 58, 26, 0.20)" stroke-width="2" />
+          <circle cx="200" cy="500" r="600" stroke="rgba(139, 58, 26, 0.15)" stroke-width="2" />
+          <circle cx="900" cy="100" r="200" stroke="rgba(139, 58, 26, 0.25)" stroke-width="2" />
+          <circle cx="900" cy="100" r="350" stroke="rgba(139, 58, 26, 0.20)" stroke-width="2" />
+        </svg>
+        <div class="registration-offer__grid">
+
+          <!-- Left Column: Offer & Timer -->
+          <div class="offer-details">
+
+            <h2 class="offer-title">Transform Your Restaurant Today</h2>
+            <p class="offer-desc">
+              Get your restaurant running on Tablekard and experience seamless QR ordering, zero downtime, and a smarter
+              kitchen. Register now to claim your exclusive benefits!
+            </p>
+            <div class="offer-highlights">
+              <div class="highlight-item">
+                <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span><strong>3 Months Free</strong> Subscription</span>
+              </div>
+              <div class="highlight-item">
+                <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span><strong>Zero</strong> Installation Cost</span>
+              </div>
+            </div>
+
+            <div class="offer-timer-wrapper">
+              <p class="timer-label">Offer Expires In:</p>
+              <div class="countdown-timer" id="offer-timer">
+                <div class="time-box">
+                  <span class="time-num" id="t-days">15</span>
+                  <span class="time-text">Days</span>
+                </div>
+                <span class="time-colon">:</span>
+                <div class="time-box">
+                  <span class="time-num" id="t-hours">00</span>
+                  <span class="time-text">Hours</span>
+                </div>
+                <span class="time-colon">:</span>
+                <div class="time-box">
+                  <span class="time-num" id="t-mins">00</span>
+                  <span class="time-text">Mins</span>
+                </div>
+                <span class="time-colon">:</span>
+                <div class="time-box">
+                  <span class="time-num" id="t-secs">00</span>
+                  <span class="time-text">Secs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Us Section -->
+            <div style="margin-top: 32px; background: rgba(139, 58, 26, 0.05); padding: 24px; border-radius: 20px; border: 1px solid rgba(139, 58, 26, 0.1);">
+              <h4 style="font-size: 1.2rem; font-family: 'Outfit', sans-serif; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Have questions? Contact Us</h4>
+              <p style="font-size: 0.95rem; color: #555; margin-bottom: 20px;">We're here to help you get started with Tablekard.</p>
+              
+              <a href="https://wa.me/919101840955?text=Hi%20Tablekard%20Team!%20I'm%20interested%20in%20setting%20up%20QR%20ordering%20for%20my%20restaurant.%20Can%20you%20help%20me%20get%20started?" 
+                 target="_blank" 
+                 style="display: inline-flex; align-items: center; gap: 10px; background: #1a1a1a; color: white; padding: 12px 24px; border-radius: 12px; font-weight: 600; font-size: 1rem; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); text-decoration: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.452-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Form -->
+          <div class="offer-form-wrapper">
+            <div class="offer-form-card">
+              <h3>Claim Your Offer Now</h3>
+              <p>Fill out the form below and our team will get you set up.</p>
+              <form class="registration-form" id="reg-form">
+                <div class="form-group">
+                  <label for="restaurantName">Restaurant Name</label>
+                  <input type="text" id="restaurantName" placeholder="e.g. The Jolly Kitchen" required>
+                </div>
+                <div class="form-group">
+                  <label for="ownerName">Owner Name</label>
+                  <input type="text" id="ownerName" placeholder="Sourav Sharma" required>
+                </div>
+                
+                <!-- Location Map -->
+                <div class="form-group" style="position: relative;">
+                  <label>Location</label>
+                  <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+                    <button type="button" id="btn-get-location" style="padding: 10px 16px; background: #8B3A1A; color: white; border-radius: 8px; font-size: 0.9rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; border: none; box-shadow: 0 2px 8px rgba(139,58,26,0.2); transition: transform 0.2s;">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                      Use My Current Location
+                    </button>
+                    <span id="loc-status" style="font-size: 0.85rem; color: #666; align-self: center;"></span>
+                  </div>
+                  <div id="map" style="width: 100%; height: 250px; border-radius: 12px; border: 1px solid #e0e0e0; z-index: 1;"></div>
+                  <p style="font-size: 0.75rem; color: #888; margin-top: 6px; margin-bottom: 0;">Drag the marker or click on the map to set your exact location.</p>
+                </div>
+
+                <div class="form-group" style="display: flex; flex-direction: row; gap: 16px;">
+                  <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column;">
+                    <label for="country">Country</label>
+                    <select id="country" required onchange="updateCountryCode()" style="width: 100%; padding: 12px 16px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; font-family: inherit; font-size: 1rem; color: #1a1a1a; background: #fff;">
+                      <option value="" disabled>Select Country</option>
+                    </select>
+                  </div>
+                  <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column;">
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="e.g. Maharashtra" required style="width: 100%;">
+                  </div>
+                  <div style="flex: 1; min-width: 150px; display: flex; flex-direction: column;">
+                    <label for="district">District</label>
+                    <input type="text" id="district" placeholder="e.g. Mumbai" required style="width: 100%;">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <div style="position: relative; display: flex; align-items: center;">
+                    <span id="country-code-display" style="position: absolute; left: 16px; font-weight: 700; color: #1a1a1a; pointer-events: none; z-index: 2;">+91</span>
+                    <input type="tel" id="phoneNumber" placeholder="9101111000" required style="width: 100%; padding-left: 65px;">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="emailAddress">Email Address</label>
+                  <input type="email" id="emailAddress" placeholder="sourav@gmail.com" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--submit-form">Register Now &rarr;</button>
+
+                <script>
+                  const countryCodes = {
+                    "Afghanistan": "+93", "Albania": "+355", "Algeria": "+213", "Andorra": "+376", "Angola": "+244", "Antigua and Barbuda": "+1", "Argentina": "+54", "Armenia": "+374", "Australia": "+61", "Austria": "+43", "Azerbaijan": "+994", "Bahamas": "+1", "Bahrain": "+973", "Bangladesh": "+880", "Barbados": "+1", "Belarus": "+375", "Belgium": "+32", "Belize": "+501", "Benin": "+229", "Bhutan": "+975", "Bolivia": "+591", "Bosnia and Herzegovina": "+387", "Botswana": "+267", "Brazil": "+55", "Brunei": "+673", "Bulgaria": "+359", "Burkina Faso": "+226", "Burundi": "+257", "Cambodia": "+855", "Cameroon": "+237", "Canada": "+1", "Cape Verde": "+238", "Central African Republic": "+236", "Chad": "+235", "Chile": "+56", "China": "+86", "Colombia": "+57", "Comoros": "+269", "Congo": "+242", "Costa Rica": "+506", "Croatia": "+385", "Cuba": "+53", "Cyprus": "+357", "Czech Republic": "+420", "Denmark": "+45", "Djibouti": "+253", "Dominica": "+1", "Dominican Republic": "+1", "Ecuador": "+593", "Egypt": "+20", "El Salvador": "+503", "Equatorial Guinea": "+240", "Eritrea": "+291", "Estonia": "+372", "Eswatini": "+268", "Ethiopia": "+251", "Fiji": "+679", "Finland": "+358", "France": "+33", "Gabon": "+241", "Gambia": "+220", "Georgia": "+995", "Germany": "+49", "Ghana": "+233", "Greece": "+30", "Grenada": "+1", "Guatemala": "+502", "Guinea": "+224", "Guinea-Bissau": "+245", "Guyana": "+592", "Haiti": "+509", "Honduras": "+504", "Hungary": "+36", "Iceland": "+354", "India": "+91", "Indonesia": "+62", "Iran": "+98", "Iraq": "+964", "Ireland": "+353", "Israel": "+972", "Italy": "+39", "Jamaica": "+1", "Japan": "+81", "Jordan": "+962", "Kazakhstan": "+7", "Kenya": "+254", "Kiribati": "+686", "Kuwait": "+965", "Kyrgyzstan": "+996", "Laos": "+856", "Latvia": "+371", "Lebanon": "+961", "Lesotho": "+266", "Liberia": "+231", "Libya": "+218", "Liechtenstein": "+423", "Lithuania": "+370", "Luxembourg": "+352", "Madagascar": "+261", "Malawi": "+265", "Malaysia": "+60", "Maldives": "+960", "Mali": "+223", "Malta": "+356", "Marshall Islands": "+692", "Mauritania": "+222", "Mauritius": "+230", "Mexico": "+52", "Micronesia": "+691", "Moldova": "+373", "Monaco": "+377", "Mongolia": "+976", "Montenegro": "+382", "Morocco": "+212", "Mozambique": "+258", "Myanmar": "+95", "Namibia": "+264", "Nauru": "+674", "Nepal": "+977", "Netherlands": "+31", "New Zealand": "+64", "Nicaragua": "+505", "Niger": "+227", "Nigeria": "+234", "North Korea": "+850", "North Macedonia": "+389", "Norway": "+47", "Oman": "+968", "Pakistan": "+92", "Palau": "+680", "Palestine": "+970", "Panama": "+507", "Papua New Guinea": "+675", "Paraguay": "+595", "Peru": "+51", "Philippines": "+63", "Poland": "+48", "Portugal": "+351", "Qatar": "+974", "Romania": "+40", "Russia": "+7", "Rwanda": "+250", "Saint Kitts and Nevis": "+1", "Saint Lucia": "+1", "Saint Vincent and the Grenadines": "+1", "Samoa": "+685", "San Marino": "+378", "Sao Tome and Principe": "+239", "Saudi Arabia": "+966", "Senegal": "+221", "Serbia": "+381", "Seychelles": "+248", "Sierra Leone": "+232", "Singapore": "+65", "Slovakia": "+421", "Slovenia": "+386", "Solomon Islands": "+677", "Somalia": "+252", "South Africa": "+27", "South Korea": "+82", "South Sudan": "+211", "Spain": "+34", "Sri Lanka": "+94", "Sudan": "+249", "Suriname": "+597", "Sweden": "+46", "Switzerland": "+41", "Syria": "+963", "Taiwan": "+886", "Tajikistan": "+992", "Tanzania": "+255", "Thailand": "+66", "Timor-Leste": "+670", "Togo": "+228", "Tonga": "+676", "Trinidad and Tobago": "+1", "Tunisia": "+216", "Turkey": "+90", "Turkmenistan": "+993", "Tuvalu": "+688", "Uganda": "+256", "Ukraine": "+380", "United Arab Emirates": "+971", "United Kingdom": "+44", "United States": "+1", "Uruguay": "+598", "Uzbekistan": "+998", "Vanuatu": "+678", "Vatican City": "+379", "Venezuela": "+58", "Vietnam": "+84", "Yemen": "+967", "Zambia": "+260", "Zimbabwe": "+263"
+                  };
+
+                  function updateCountryCode() {
+                    const countrySelect = document.getElementById('country');
+                    const codeDisplay = document.getElementById('country-code-display');
+                    const code = countrySelect.value;
+                    
+                    if (code) {
+                      codeDisplay.textContent = code;
+                      
+                      const phoneInput = document.getElementById('phoneNumber');
+                      
+                      // Set max length based on country
+                      if (code === '+91') {
+                        phoneInput.setAttribute('maxlength', '10');
+                      } else {
+                        phoneInput.setAttribute('maxlength', '15');
+                      }
+                      
+                      if (code.length > 3) {
+                         phoneInput.style.paddingLeft = '75px';
+                      } else {
+                         phoneInput.style.paddingLeft = '65px';
+                      }
+                    }
+                  }
+
+                  // Leaflet Map Logic
+                  document.addEventListener("DOMContentLoaded", function() {
+                    // Populate countries dropdown
+                    const countrySelect = document.getElementById('country');
+                    for (const [country, code] of Object.entries(countryCodes)) {
+                      const option = document.createElement('option');
+                      option.value = code;
+                      option.textContent = `${country} (${code})`;
+                      if (country === 'India') option.selected = true;
+                      countrySelect.appendChild(option);
+                    }
+                    updateCountryCode();
+
+                    // Default center (India)
+                    let map = L.map('map').setView([20.5937, 78.9629], 4);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                      maxZoom: 19,
+                      attribution: '© OpenStreetMap'
+                    }).addTo(map);
+
+                    // Add a slight delay to ensure container size is computed properly
+                    setTimeout(() => { map.invalidateSize(); }, 500);
+
+                    let marker = L.marker([20.5937, 78.9629], {draggable: true}).addTo(map);
+
+                    function fetchLocationData(lat, lng) {
+                      const statusEl = document.getElementById('loc-status');
+                      statusEl.textContent = "Fetching location details...";
+                      
+                      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`)
+                        .then(res => res.json())
+                        .then(data => {
+                          statusEl.textContent = "Location updated!";
+                          setTimeout(() => { statusEl.textContent = ""; }, 3000);
+                          
+                          if (data && data.address) {
+                            const addr = data.address;
+                            
+                            // Map country to select value
+                            const countryName = addr.country;
+                            
+                            if (countryCodes[countryName]) {
+                              countrySelect.value = countryCodes[countryName];
+                            } else if (countryName === 'United States of America') {
+                              countrySelect.value = countryCodes['United States'];
+                            }
+                            
+                            updateCountryCode();
+
+                            if (addr.state) {
+                              document.getElementById('state').value = addr.state;
+                            }
+                            
+                            const district = addr.state_district || addr.county || addr.city || addr.town || addr.district;
+                            if (district) {
+                              document.getElementById('district').value = district;
+                            }
+                          }
+                        })
+                        .catch(err => {
+                          statusEl.textContent = "Error fetching location data.";
+                          console.error(err);
+                        });
+                    }
+
+                    marker.on('dragend', function (e) {
+                      const pos = marker.getLatLng();
+                      fetchLocationData(pos.lat, pos.lng);
+                    });
+
+                    map.on('click', function(e) {
+                      marker.setLatLng(e.latlng);
+                      fetchLocationData(e.latlng.lat, e.latlng.lng);
+                    });
+
+                    document.getElementById('btn-get-location').addEventListener('click', function() {
+                      const statusEl = document.getElementById('loc-status');
+                      if (navigator.geolocation) {
+                        statusEl.textContent = "Locating...";
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                          const lat = position.coords.latitude;
+                          const lng = position.coords.longitude;
+                          map.setView([lat, lng], 14);
+                          marker.setLatLng([lat, lng]);
+                          fetchLocationData(lat, lng);
+                        }, function(error) {
+                          statusEl.textContent = "Geolocation failed. Please check permissions.";
+                        });
+                      } else {
+                        statusEl.textContent = "Geolocation not supported by this browser.";
+                      }
+                    });
+
+                    // Supabase Init & Form Submission
+                    let supabase = null;
+                    try {
+                      const supabaseUrl = 'https://sguegujmoawhtstzsdqs.supabase.co';
+                      const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNndWVndWptb2F3aHRzdHpzZHFzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA5MTMxMjQsImV4cCI6MjA4NjQ4OTEyNH0.ih0N4BZIYvahD4pmqB8-X8bD0kFJ2Dx875ritXVxMjw';
+                      if (window.supabase) {
+                        supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
+                      } else {
+                        console.warn("Supabase library not loaded. Perhaps blocked by an adblocker?");
+                      }
+                    } catch (e) {
+                      console.error("Supabase init error:", e);
+                    }
+
+                    const form = document.getElementById('reg-form');
+                    if (form) {
+                      form.addEventListener('submit', async function(e) {
+                        e.preventDefault(); // Prevent page reload and scroll
+                        
+                        // Validate Phone Number
+                        const code = document.getElementById('country-code-display').textContent.trim();
+                        const number = document.getElementById('phoneNumber').value.trim();
+                        const fullNumber = code + number;
+                        
+                        try {
+                          if (typeof libphonenumber !== 'undefined') {
+                            const parsed = libphonenumber.parsePhoneNumber(fullNumber);
+                            if (!parsed || !parsed.isValid()) {
+                              alert("Please enter a valid full phone number for your selected country.");
+                              return; // Stop submission
+                            }
+                          } else {
+                            if (number.length < 7) {
+                              alert("Please enter a complete phone number.");
+                              return;
+                            }
+                          }
+                        } catch(err) {
+                          console.error("Validation error:", err);
+                          alert("Please enter a valid full phone number.");
+                          return; // Stop submission on error
+                        }
+
+                        // Extract Data
+                        const restaurantName = document.getElementById('restaurantName').value.trim();
+                        const ownerName = document.getElementById('ownerName').value.trim();
+                        const countrySelect = document.getElementById('country');
+                        const countryName = countrySelect.options[countrySelect.selectedIndex] ? countrySelect.options[countrySelect.selectedIndex].text.replace(/\s\(\+\d+\)/, '') : '';
+                        const state = document.getElementById('state').value.trim();
+                        const district = document.getElementById('district').value.trim();
+                        const email = document.getElementById('emailAddress').value.trim();
+
+                        const submitBtn = document.querySelector('.btn--submit-form');
+                        const originalText = submitBtn.innerHTML;
+                        submitBtn.innerHTML = 'Submitting...';
+                        submitBtn.disabled = true;
+
+                        if (!supabase) {
+                          alert("Database connection failed. Please disable your adblocker and refresh the page.");
+                          submitBtn.innerHTML = originalText;
+                          submitBtn.disabled = false;
+                          return;
+                        }
+
+                        const { data, error } = await supabase
+                          .from('landing_leads')
+                          .insert([
+                            {
+                              restaurant_name: restaurantName,
+                              owner_name: ownerName,
+                              country: countryName,
+                              state: state,
+                              district: district,
+                              phone_number: fullNumber,
+                              email: email || null
+                            }
+                          ]);
+
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+
+                        if (error) {
+                          console.error("Error inserting to Supabase:", error);
+                          alert("Something went wrong while saving your details. Please try again.");
+                          return;
+                        }
+
+                        document.getElementById('success-modal').style.display = 'flex';
+                      });
+                    }
+                  });
+                </script>
+              </form>
+
+              <!-- Success Modal -->
+              <div id="success-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; backdrop-filter: blur(4px);">
+                <div style="background: white; padding: 40px; border-radius: 24px; text-align: center; max-width: 400px; width: 90%; box-shadow: 0 24px 64px rgba(0,0,0,0.2);">
+                  <lottie-player src="images/business_handshake.json" background="transparent" speed="1" style="width: 140px; height: 140px; margin: 0 auto 16px;" loop autoplay></lottie-player>
+                  <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.6rem; margin-bottom: 12px; color: #1a1a1a; font-weight: 800;">Submitted!</h3>
+                  <p style="color: #666; margin-bottom: 24px; font-size: 0.95rem; line-height: 1.5;">Thank you for your interest! Our team will get in touch with you shortly to help set up Tablekard for your restaurant.</p>
+                  <button onclick="document.getElementById('success-modal').style.display='none'; document.getElementById('reg-form').reset();" style="background: #1a1a1a; color: white; border: none; padding: 14px 32px; border-radius: 12px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: transform 0.2s; width: 100%;">Close & Return</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="hyperpure__visual">
-        <img src="images/scan_qr_table.png" alt="Scanning QR code at table"
-          style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.12);" />
-      </div>
-    </div>
   </section>
 
 
@@ -968,6 +1305,57 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      function startTimer() {
+        var fifteenDays = 15 * 24 * 60 * 60 * 1000;
+        var storageKey = 'tablekard_offer_endtime';
+        var endTime = localStorage.getItem(storageKey);
+
+        if (!endTime) {
+          endTime = Date.now() + fifteenDays;
+          localStorage.setItem(storageKey, endTime);
+        } else {
+          endTime = parseInt(endTime, 10);
+        }
+
+        function updateTimer() {
+          var now = Date.now();
+          var timeLeft = endTime - now;
+
+          if (timeLeft <= 0) {
+            endTime = Date.now() + fifteenDays;
+            localStorage.setItem(storageKey, endTime);
+            timeLeft = fifteenDays;
+          }
+
+          var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var mins = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+          var secs = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+          var elDays = document.getElementById('t-days');
+          var elHours = document.getElementById('t-hours');
+          var elMins = document.getElementById('t-mins');
+          var elSecs = document.getElementById('t-secs');
+
+          if (elDays) elDays.textContent = days < 10 ? '0' + days : days;
+          if (elHours) elHours.textContent = hours < 10 ? '0' + hours : hours;
+          if (elMins) elMins.textContent = mins < 10 ? '0' + mins : mins;
+          if (elSecs) elSecs.textContent = secs < 10 ? '0' + secs : secs;
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', startTimer);
+      } else {
+        startTimer();
+      }
+    })();
+  </script>
 </body>
 
 </html>
