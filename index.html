@@ -4,9 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Tablekard — QR-based contactless dine-in ordering for restaurants. Turn every table into a self-service ordering station." />
+  <!-- Basic SEO -->
   <title>Tablekard — Smart QR Ordering for Modern Restaurants</title>
+  <meta name="description" content="Tablekard provides seamless QR-based contactless dine-in ordering for restaurants. Turn every table into a smart, self-service ordering station to increase efficiency and revenue." />
+  <meta name="keywords" content="QR ordering, restaurant tech, digital menu, contactless dining, restaurant POS, kitchen display system, Tablekard, food tech" />
+  <meta name="author" content="GrowTez" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tablekard.com" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tablekard.com/" />
+  <meta property="og:title" content="Tablekard — Smart QR Ordering for Modern Restaurants" />
+  <meta property="og:description" content="Seamless QR-based contactless dine-in ordering for restaurants. Turn every table into a smart, self-service ordering station." />
+  <meta property="og:image" content="https://tablekard.com/images/screenshot_admin.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://tablekard.com/" />
+  <meta property="twitter:title" content="Tablekard — Smart QR Ordering for Modern Restaurants" />
+  <meta property="twitter:description" content="Seamless QR-based contactless dine-in ordering for restaurants. Turn every table into a smart, self-service ordering station." />
+  <meta property="twitter:image" content="https://tablekard.com/images/screenshot_admin.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -21,6 +39,23 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛶</text></svg>" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tablekard",
+      "operatingSystem": "Web",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "description": "Tablekard provides seamless QR-based contactless dine-in ordering for restaurants. Turn every table into a smart, self-service ordering station."
+    }
+  </script>
 </head>
 
 <body>
@@ -70,7 +105,7 @@
     <div class="container video-preview-container">
       <div class="video-preview-content">
         <span class="video-preview-subtitle">Do you have a restaurant?</span>
-        <h1 class="video-preview-title">Modernise it with Tablekard</h1>
+        <h2 class="video-preview-title">Modernise it with Tablekard</h2>
         <a href="#register" class="btn-video-cta">Get Started Free →</a>
       </div>
     </div>
@@ -104,6 +139,9 @@
   </script>
 
 
+  <!-- Main Content Wrapper for SEO -->
+  <main>
+
   <!-- Hero -->
   <section class="hero-v2">
     <!-- Decorative SVG curves -->
@@ -120,11 +158,10 @@
     </svg>
 
     <!-- Floating food images -->
-    <img src="images/hero_burger.png" class="hero-v2__float hero-v2__float--burger" alt="" aria-hidden="true" />
-
-    <img src="images/qr-scan.webp" class="hero-v2__float hero-v2__float--qr-scan" alt="" aria-hidden="true" />
-    <img src="images/hero_dumplings.png" class="hero-v2__float hero-v2__float--dumplings" alt="" aria-hidden="true" />
-    <img src="images/hero_pizza.png" class="hero-v2__float hero-v2__float--pizza" alt="" aria-hidden="true" />
+    <img src="images/hero_burger.png" class="hero-v2__float hero-v2__float--burger" alt="Tablekard Digital Menu Burger Item" loading="lazy" />
+    <img src="images/qr-scan.webp" class="hero-v2__float hero-v2__float--qr-scan" alt="Tablekard Table QR Code Scan" loading="lazy" />
+    <img src="images/hero_dumplings.png" class="hero-v2__float hero-v2__float--dumplings" alt="Tablekard Digital Menu Dumplings Item" loading="lazy" />
+    <img src="images/hero_pizza.png" class="hero-v2__float hero-v2__float--pizza" alt="Tablekard Digital Menu Pizza Item" loading="lazy" />
 
     <!-- Center content -->
     <div class="hero-v2__center">
@@ -662,7 +699,7 @@
             <!-- Screen area — perfect inset -->
             <div
               style="position:absolute;top:10px;left:8px;right:8px;bottom:10px;border-radius:32px;overflow:hidden;z-index:5;background:#fff;">
-              <img src="images/screenshot_customer.jpg" alt="Customer App"
+              <img src="images/screenshot_customer.jpg" alt="Customer App" loading="lazy"
                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
             </div>
             <!-- Home bar -->
@@ -716,7 +753,7 @@
             </div>
             <div
               style="position:absolute;top:10px;left:8px;right:8px;bottom:10px;border-radius:32px;overflow:hidden;z-index:5;background:#fff;">
-              <img src="images/screenshot_kitchen.jpg" alt="Kitchen App"
+              <img src="images/screenshot_kitchen.jpg" alt="Kitchen App" loading="lazy"
                 style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
             </div>
             <div
@@ -787,7 +824,7 @@
             <div style="width:6px;height:6px;background:#3a3a3a;border-radius:50%;margin:0 auto 8px;"></div>
             <!-- Screenshot -->
             <div style="border-radius:8px;overflow:hidden;background:#fff;width:100%;">
-              <img src="images/screenshot_admin.jpg" alt="Admin Dashboard"
+              <img src="images/screenshot_admin.jpg" alt="Admin Dashboard" loading="lazy"
                 style="width:100%;height:auto;display:block;">
             </div>
           </div>
@@ -1362,6 +1399,8 @@
       </div>
   </section>
 
+
+  </main>
 
   <!-- Premium Footer -->
   <footer class="footer">
