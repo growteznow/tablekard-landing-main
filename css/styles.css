@@ -2070,78 +2070,122 @@ ul {
   /* === Navbar === */
   .navbar__hamburger { display: flex; }
   .navbar__nav { display: none !important; }
-  .navbar__inner { height: 68px; }
-  .navbar__logo-img { height: 44px; }
-  .navbar__logo { margin-left: -8px; }
+  .navbar__inner { height: 58px; justify-content: space-between; }
+  .navbar__logo-img { height: 38px; }
+  .navbar__logo { margin-left: -6px; }
 
   /* === Video Banner === */
-  .video-preview-section { height: 320px; }
+  .video-preview-section { height: 240px; margin-top: 58px; }
+  .video-preview-container { display: flex; justify-content: center; }
   .video-preview-content {
     margin-left: 0;
-    padding: 0 20px;
+    padding: 0 16px;
     text-align: center;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .video-preview-subtitle { font-size: 0.8rem; letter-spacing: 1.5px; }
-  .video-preview-title { font-size: clamp(1.6rem, 7vw, 2.2rem); margin-bottom: 20px; }
-  .btn-video-cta { padding: 12px 24px; font-size: 0.95rem; }
+  .video-preview-subtitle { font-size: 0.72rem; letter-spacing: 1.2px; margin-bottom: 8px; }
+  .video-preview-title { font-size: clamp(1.3rem, 6vw, 1.8rem); margin-bottom: 14px; }
+  .btn-video-cta { padding: 10px 20px; font-size: 0.88rem; border-radius: 10px; }
 
   /* === Hero V2 === */
-  .hero-v2 { padding-top: 40px; padding-bottom: 40px; }
-  .hero-v2__center { padding: 0 20px; }
-  .hero-v2__center > div { flex-direction: column; align-items: center; gap: 12px !important; }
-  .hero-v2__center .btn { width: 100%; max-width: 320px; text-align: center; }
+  .hero-v2 { padding-top: 28px; padding-bottom: 28px; }
+  .hero-v2__center { padding: 0 16px; text-align: center; }
+  .hero-v2__center > div { flex-direction: column; align-items: center; gap: 10px !important; }
+  .hero-v2__center .btn { width: 100%; max-width: 300px; text-align: center; padding: 12px 20px !important; font-size: 0.95rem !important; }
+  .hero-v2__title { font-size: 1.85rem !important; margin-bottom: 12px; text-align: center; }
+  .hero-v2__stats-bar { padding: 16px 20px; gap: 0; }
+  .hero-v2__stat-number { font-size: 1.4rem; }
+  .hero-v2__stat-label { font-size: 0.75rem; }
+  .hero-v2__stat-icon svg { width: 24px; height: 24px; }
+  .hero-v2__stat-item { align-items: center; }
 
   /* === Features Section === */
   #features {
-    padding-top: 56px !important;
+    padding-top: 40px !important;
+    padding-bottom: 0 !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
+    text-align: center !important;
+    align-items: center !important;
   }
+  #features > div:first-of-type h2 { font-size: 1.5rem !important; margin-bottom: 8px !important; text-align: center !important; }
+  #features > div:first-of-type p { font-size: 0.9rem !important; text-align: center !important; }
   /* Hide the absolute-positioned desktop icon grid entirely */
   #features > div:nth-of-type(2) { display: none !important; }
 
+  /* === Ecosystem mobile steps === */
+  .eco-mobile-steps { padding: 0 !important; }
+  .eco-step { align-items: center; }
+  .eco-step__badge { align-self: center; }
+  .eco-step__card { padding: 14px; gap: 10px; border-radius: 14px; text-align: left; }
+  .eco-step__icon { width: 40px; height: 40px; border-radius: 10px; flex-shrink: 0; }
+  .eco-step__icon svg { width: 22px; height: 22px; }
+  .eco-step__title { font-size: 13px; margin-bottom: 4px; }
+  .eco-step__desc { font-size: 12px; line-height: 1.55; }
+  .eco-step__connector { padding: 8px 0; justify-content: center; }
+
   /* === Footer === */
-  .footer { padding: 60px 0 24px; }
-  .footer__top { grid-template-columns: 1fr; gap: 32px; }
-  .footer__brand-col { grid-column: auto; }
-  .footer__logo { margin-left: 0 !important; }
-  .footer__logo-img { height: 44px !important; }
-  .footer__desc { font-size: 0.9rem; }
-  .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
-  .footer__contact-info { flex-direction: column; gap: 10px; }
-  .footer__socials { justify-content: flex-start; }
+  .footer { padding: 40px 0 20px; }
+  .footer__top { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .footer__brand-col { grid-column: auto; display: flex; flex-direction: column; align-items: center; }
+  .footer__logo { margin-left: 0 !important; justify-content: center; }
+  .footer__logo-img { height: 38px !important; }
+  .footer__desc { font-size: 0.85rem; line-height: 1.55; text-align: center; }
+  .footer__bottom { flex-direction: column; gap: 6px; text-align: center; padding-top: 16px; align-items: center; }
+  .footer__contact-info { flex-direction: column; gap: 8px; align-items: center; }
+  .footer__socials { justify-content: center; gap: 12px; }
+  .footer__links-col { text-align: center; }
+  .footer__links-col h4 { font-size: 0.8rem; margin-bottom: 10px; text-align: center; }
+  .footer__links-col a { font-size: 0.85rem; }
+  .footer__links-col ul { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .footer__copyright { font-size: 0.78rem; text-align: center; }
+  .footer__badges { font-size: 0.78rem; text-align: center; }
 
   /* === Registration Section === */
-  .registration-offer { padding: 48px 0; }
-  .registration-card { padding: 28px 16px; border-radius: 16px; }
-  .registration-offer__grid { grid-template-columns: 1fr; gap: 32px; }
-  .offer-title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
-  .offer-desc { font-size: 0.95rem; }
-  .offer-form-card { padding: 28px 20px; }
-  .offer-form-card h3 { font-size: 1.4rem; }
-  .time-box { width: 62px; min-width: 62px; padding: 10px 8px; }
-  .time-num { font-size: 1.6rem; }
+  .registration-offer { padding: 36px 0; }
+  .registration-card { padding: 22px 14px; border-radius: 14px; }
+  .registration-offer__grid { grid-template-columns: 1fr; gap: 24px; }
+  .offer-details { align-items: center; text-align: center; }
+  .offer-title { font-size: clamp(1.5rem, 6vw, 2rem); text-align: center; }
+  .offer-desc { font-size: 0.88rem; line-height: 1.55; text-align: center; }
+  .offer-highlights { gap: 10px; margin-top: 6px; align-items: center; }
+  .highlight-item { font-size: 0.9rem; gap: 8px; justify-content: center; }
+  .offer-timer-wrapper { text-align: center; padding: 16px; }
+  .offer-form-card { padding: 22px 16px; border-radius: 16px; text-align: center; }
+  .offer-form-card h3 { font-size: 1.25rem; margin-bottom: 6px; text-align: center; }
+  .offer-form-card p { font-size: 0.85rem; margin-bottom: 18px; text-align: center; }
+  .registration-form .form-group { margin-bottom: 14px; text-align: left; } /* keep labels left-aligned */
+  .registration-form label { text-align: left; }
+  .registration-form input { padding: 11px 14px; font-size: 0.92rem; }
+  .time-box { width: 58px; min-width: 58px; padding: 8px 6px; }
+  .time-num { font-size: 1.4rem; }
+  .timer-label { font-size: 0.78rem; margin-bottom: 10px; text-align: center; }
+  .btn--submit-form { padding: 13px; font-size: 0.95rem; }
 
   /* Form fields: stack country/state/district */
   .form-group[style*="flex-direction: row"] {
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 }
+
 
 /* ════════════════════
    SMALL PHONE  ≤ 480px
    ════════════════════ */
 @media (max-width: 480px) {
-  .video-preview-section { height: 280px; }
-  .video-preview-title { font-size: 1.5rem; }
-  .hero-v2__title { font-size: 1.9rem !important; }
-  .hero-v2__stats-bar { padding: 20px 16px; }
-  .registration-card { padding: 20px 12px; }
-  .offer-form-card { padding: 20px 14px; border-radius: 16px; }
-  .countdown-timer { gap: 6px; }
-  .time-box { width: 54px; min-width: 54px; }
-  .time-num { font-size: 1.3rem; }
-  .footer__links-col ul { columns: 2; column-gap: 16px; }
-}
+  .video-preview-section { height: 210px; }
+  .video-preview-title { font-size: 1.25rem; }
+  .hero-v2__title { font-size: 1.65rem !important; }
+  .hero-v2__stats-bar { padding: 14px 12px; }
+  .registration-card { padding: 16px 10px; }
+  .offer-form-card { padding: 16px 12px; border-radius: 14px; }
+  .countdown-timer { gap: 5px; }
+  .time-box { width: 50px; min-width: 50px; }
+  .time-num { font-size: 1.2rem; }
+  .footer__links-col ul { columns: 2; column-gap: 12px; }
+}
+
