@@ -1,9 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".header");
+  const video = document.getElementById('bg-video');
+  const preloader = document.getElementById('site-preloader');
+  if (preloader) {
+    let isLoaded = false;
+    const hidePreloader = () => {
+      if (!isLoaded) {
+        isLoaded = true;
+        preloader.classList.add('preloader--hidden');
+      }
+    };
+    if (video) {
+      video.addEventListener('playing', hidePreloader);
+      video.addEventListener('canplaythrough', hidePreloader);
+      if (video.readyState >= 3) {
+        hidePreloader();
+      }
+    } else {
+      hidePreloader();
+    }
+    // Safety timeout fallback
+    setTimeout(hidePreloader, 4000);
+  }
+
+  const header = document.querySelector(".navbar");
   const featureCards = document.querySelectorAll(".feature-card");
 
   window.addEventListener("scroll", () => {
-    header.classList.toggle("scrolled", window.scrollY > 20);
+    if (header) {
+      header.classList.toggle("scrolled", window.scrollY > 20);
+    }
   });
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
