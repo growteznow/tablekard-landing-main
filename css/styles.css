@@ -715,7 +715,7 @@ ul {
 
   /* Restore floating images at mobile-friendly sizes */
   .hero-v2__float--analytics {
-    display: block;
+    display: none;
     width: 130px;
     top: auto;
     bottom: 10%;
@@ -724,7 +724,7 @@ ul {
   }
 
   .hero-v2__float--kitchen-queue {
-    display: block;
+    display: none;
     width: 120px;
     top: 8%;
     right: 2%;
@@ -732,7 +732,7 @@ ul {
   }
 
   .hero-v2__float--payment-card {
-    display: block;
+    display: none;
     width: 110px;
     top: auto;
     bottom: 8%;
@@ -2686,5 +2686,133 @@ ul {
 
   .new-hero-image {
     max-height: 300px;
+  }
+}
+
+/* === Mobile Optimizations for Sub-pages (About, Careers, Contact, etc.) === */
+@media (max-width: 768px) {
+  /* Center text on mobile */
+  .sp-hero,
+  .sp-main,
+  .sp-card,
+  .sp-section-title,
+  .sp-section-subtitle,
+  .sp-contact-card,
+  .sp-icon-card {
+    text-align: center !important;
+  }
+
+  .sp-accent-line {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Center list item blocks text-wise or left-aligned within centered wrapper */
+  .sp-card ul {
+    text-align: left !important;
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  /* Fix buttons on mobile: full width, centered */
+  .sp-btn-gold {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 12px 16px !important;
+    font-size: 0.9rem !important;
+    white-space: normal !important;
+  }
+
+  /* Fix job card details wrapping / alignment on mobile */
+  .sp-job-card {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 24px 20px !important;
+  }
+
+  .sp-job-meta {
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Fix contact cards spacing on mobile */
+  .sp-contact-card {
+    margin-bottom: 16px !important;
+  }
+
+  /* Convert comparison tables on mobile to stacked block cards so they don't require scrolling */
+  .comparison-table-wrapper {
+    overflow-x: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 16px !important;
+  }
+
+  .comparison-table thead {
+    display: none !important;
+  }
+
+  .comparison-table,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table td {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .comparison-table tr {
+    margin-bottom: 24px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  }
+
+  .comparison-table tr:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .comparison-table td.col-feature {
+    background: #8B3A1A !important;
+    color: #ffffff !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    padding: 14px 16px !important;
+    text-align: center !important;
+  }
+
+  .comparison-table td.col-bad,
+  .comparison-table td.col-good {
+    padding: 16px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+    text-align: left !important;
+  }
+
+  .comparison-table td.col-bad::before {
+    content: "Without Tablekard:" !important;
+    display: block !important;
+    font-weight: 700 !important;
+    color: #d32f2f !important;
+    margin-bottom: 6px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .comparison-table td.col-good::before {
+    content: "With Tablekard:" !important;
+    display: block !important;
+    font-weight: 700 !important;
+    color: #1b873f !important;
+    margin-bottom: 6px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
   }
 }
