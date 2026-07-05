@@ -441,6 +441,68 @@ SUBPAGE_CSS = """
   .sp-split-col.good h3 { color: #1b873f; }
   .sp-split-col ul { padding-left: 20px; color: #444; line-height: 1.85; font-size: 0.95rem; margin: 0; }
 
+  /* ─── Comparison Table ─── */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: inherit;
+    background: #ffffff;
+  }
+  .comparison-table th {
+    background: #fcfcfc;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+  }
+  .comparison-table td {
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    vertical-align: middle;
+  }
+  .comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-table th.col-feature { width: 20%; }
+  .comparison-table th.col-bad { width: 40%; color: #d32f2f; background: rgba(239,68,68,0.02); }
+  .comparison-table th.col-good { width: 40%; color: #1b873f; background: rgba(34,197,94,0.02); }
+  
+  .comparison-table td.col-feature {
+    font-weight: 700;
+    color: #444;
+    background: #fdfdfd;
+  }
+  .comparison-table td.col-bad {
+    color: #666;
+    background: rgba(239,68,68,0.01);
+  }
+  .comparison-table td.col-good {
+    color: #1a1a1a;
+    font-weight: 500;
+    background: rgba(34,197,94,0.01);
+  }
+  .comparison-table td.col-bad .status-icon {
+    color: #ef4444;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  .comparison-table td.col-good .status-icon {
+    color: #22c55e;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
   /* ─── Values row ─── */
   .sp-values-grid {
     display: grid;
@@ -598,29 +660,48 @@ about_body = """
   <h2>The Problem We Solve</h2>
   <span class="sp-accent-line"></span>
   <p>Walk into almost any restaurant today and you will encounter the same friction: a dog-eared paper menu, a waiter who writes your order on a notepad, a kitchen that receives the note and might misread it, and a billing process that takes longer than the meal itself. Every step in that chain is an opportunity for error — and a hidden cost for the restaurant owner.</p>
-  <div class="sp-split" style="margin-top:24px;">
-    <div class="sp-split-col bad">
-      <h3>Without Tablekard</h3>
-      <ul>
-        <li>Paper menus — unhygienic, expensive to reprint, impossible to update instantly</li>
-        <li>Customers wait for a waiter just to begin ordering</li>
-        <li>Verbal orders lead to kitchen errors and customer complaints</li>
-        <li>₹50,000+ upfront cost for traditional POS hardware</li>
-        <li>No data — zero visibility into what sells, when, and to whom</li>
-        <li>Staff stretched thin managing orders manually across tables</li>
-      </ul>
-    </div>
-    <div class="sp-split-col good">
-      <h3>With Tablekard</h3>
-      <ul>
-        <li>Digital QR menu — update prices and items instantly from anywhere</li>
-        <li>Guests order the moment they sit down, without any waiter interaction</li>
-        <li>Digital orders go straight to the kitchen dashboard with zero errors</li>
-        <li>Starts from ₹999/month — no hardware investment needed</li>
-        <li>Real-time analytics: bestsellers, peak hours, revenue trends</li>
-        <li>Staff freed up to focus on hospitality, not order-taking</li>
-      </ul>
-    </div>
+  <div class="comparison-table-wrapper">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th class="col-feature">Feature</th>
+          <th class="col-bad">Without Tablekard</th>
+          <th class="col-good">With Tablekard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-feature">Menu Management</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Paper menus — unhygienic, expensive to reprint, impossible to update instantly</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Digital QR menu — update prices and items instantly from anywhere</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Ordering Speed</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Customers wait for a waiter just to begin ordering</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Guests order the moment they sit down, without any waiter interaction</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Kitchen Accuracy</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Verbal orders lead to kitchen errors and customer complaints</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Digital orders go straight to the kitchen dashboard with zero errors</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Setup Cost</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>₹50,000+ upfront cost for traditional POS hardware</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Affordable monthly subscription — no hardware investment needed</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Data & Analytics</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>No data — zero visibility into what sells, when, and to whom</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Real-time analytics: bestsellers, peak hours, revenue trends</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Staff Efficiency</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Staff stretched thin managing orders manually across tables</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Staff freed up to focus on hospitality, not order-taking</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
@@ -692,38 +773,7 @@ careers_body = """
   <h2>Why Work at Tablekard?</h2>
   <span class="sp-accent-line"></span>
   <p>We are a small, focused team building technology that has a direct, measurable impact on the livelihoods of restaurant owners across India. At Tablekard, you will not disappear into a large org chart. You will own your work, ship frequently, and see your code used by real restaurants — often within days of writing it.</p>
-  <div class="sp-grid-3" style="margin-top:24px;">
-    <div class="sp-icon-card">
-      <span class="sp-icon">🚀</span>
-      <h3>Ship Fast, Learn Faster</h3>
-      <p>We deploy multiple times a week. You will see your work in production — and in front of restaurant owners — almost immediately.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🌏</span>
-      <h3>Remote-First Culture</h3>
-      <p>Work from anywhere in India. We are outcomes-driven, not hours-driven. As long as you deliver, your schedule is yours.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">📈</span>
-      <h3>Equity & Growth</h3>
-      <p>Early team members receive meaningful equity. As Tablekard grows, so does your stake in what we are building together.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🍽️</span>
-      <h3>Real-World Impact</h3>
-      <p>The software you build is used by real restaurant owners trying to grow their business. That is a responsibility we take seriously — and it makes the work meaningful.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🛠️</span>
-      <h3>Modern Tech Stack</h3>
-      <p>React, Next.js, Supabase, PostgreSQL, Razorpay, TypeScript. We use the best tools available and invest in keeping the codebase clean.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🎓</span>
-      <h3>Learning Budget</h3>
-      <p>Every team member gets an annual learning budget for courses, books, and conferences. We invest in your growth because it directly benefits our product.</p>
-    </div>
-  </div>
+
 </div>
 
 <div class="sp-card">
@@ -740,7 +790,7 @@ careers_body = """
         <span class="sp-job-dept">Engineering</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Senior Full Stack Engineer" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Senior%20Full%20Stack%20Engineer%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 
   <div class="sp-job-card">
@@ -752,7 +802,7 @@ careers_body = """
         <span class="sp-job-dept">Sales & Customer Success</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Restaurant Success Manager" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Restaurant%20Success%20Manager%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 
   <div class="sp-job-card">
@@ -764,7 +814,7 @@ careers_body = """
         <span class="sp-job-dept">Design</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Product Designer" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Product%20Designer%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 
   <div class="sp-job-card">
@@ -776,7 +826,7 @@ careers_body = """
         <span class="sp-job-dept">Marketing</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Growth Specialist" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Growth%20%26%20Marketing%20Specialist%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 </div>
 
@@ -787,7 +837,7 @@ careers_body = """
     <div class="sp-step">
       <div class="sp-step__num">1</div>
       <h3>Application Review</h3>
-      <p>Send your CV and a short note on why you want to work at Tablekard to <strong>careers@tablekard.com</strong>. We read every application personally and respond within 5 business days.</p>
+      <p>Reach out to us on WhatsApp at <strong>+91 91018 40955</strong> stating the role you are applying for, along with a link to your CV or portfolio. We respond within 5 business days.</p>
     </div>
     <div class="sp-step">
       <div class="sp-step__num">2</div>
@@ -809,8 +859,8 @@ careers_body = """
 
 <div class="sp-cta-banner">
   <h2>Don't See the Right Role?</h2>
-  <p>We are always interested in exceptional people. Send us your CV and tell us how you think you can contribute — we will keep it on file and reach out when the right opportunity comes up.</p>
-  <a href="mailto:careers@tablekard.com" class="sp-btn-gold">Send an Open Application →</a>
+  <p>We are always interested in exceptional people. Message us on WhatsApp and tell us how you think you can contribute — we will keep your profile on file and reach out when the right opportunity comes up.</p>
+  <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20submit%20an%20open%20application%20to%20Tablekard." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
 </div>
 """
 
@@ -824,51 +874,18 @@ contact_body = """
   <p>Whether you are a restaurant owner looking to get started, a partner looking to integrate with our platform, a journalist with a press inquiry, or simply someone with a question — we would love to hear from you. Our team typically responds within one business day.</p>
 </div>
 
-<div class="sp-grid-3" style="margin-bottom:32px;">
+<div class="sp-grid-2" style="margin-bottom:32px;">
   <div class="sp-contact-card">
-    <span class="sp-contact-icon">✉️</span>
-    <h3>Email Us</h3>
-    <p>For general inquiries, support requests, or partnership opportunities. We respond to every email personally.</p>
-    <a class="sp-contact-link" href="mailto:hello@tablekard.com">hello@tablekard.com</a>
-  </div>
-  <div class="sp-contact-card">
-    <span class="sp-contact-icon">📞</span>
+    <span class="sp-contact-icon"><i class="fa-solid fa-phone"></i></span>
     <h3>Call Us</h3>
     <p>Speak directly with our restaurant onboarding specialists. Available Monday–Saturday, 9 AM–7 PM IST.</p>
     <a class="sp-contact-link" href="tel:+919101840955">+91 91018 40955</a>
   </div>
   <div class="sp-contact-card">
-    <span class="sp-contact-icon">💬</span>
+    <span class="sp-contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
     <h3>WhatsApp</h3>
     <p>The fastest way to reach us. Send a message anytime — we aim to reply within 2 hours during business hours.</p>
     <a href="https://wa.me/919101840955?text=Hi%20Tablekard%20Team!%20I%27d%20like%20to%20know%20more%20about%20your%20product." target="_blank" class="sp-btn-gold" style="display:inline-block;margin-top:4px;">Message Us →</a>
-  </div>
-</div>
-
-<div class="sp-card">
-  <h2>Dedicated Support Channels</h2>
-  <span class="sp-accent-line"></span>
-  <div class="sp-grid-2">
-    <div class="sp-icon-card">
-      <span class="sp-icon">🍽️</span>
-      <h3>Restaurant Onboarding</h3>
-      <p>New to Tablekard and want help setting up your restaurant? Email <a href="mailto:onboarding@tablekard.com" style="color:#b8953a;font-weight:600;">onboarding@tablekard.com</a> and one of our specialists will guide you through the entire process over a 30-minute video call.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🛠️</span>
-      <h3>Technical Support</h3>
-      <p>Experiencing an issue with the platform? Email <a href="mailto:support@tablekard.com" style="color:#b8953a;font-weight:600;">support@tablekard.com</a> with a description of the problem and your restaurant name. Pro subscribers receive priority response within 4 hours.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🤝</span>
-      <h3>Partnerships & Integrations</h3>
-      <p>Are you a POS provider, food aggregator, or technology company looking to integrate with Tablekard? Reach us at <a href="mailto:partnerships@tablekard.com" style="color:#b8953a;font-weight:600;">partnerships@tablekard.com</a>.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">📰</span>
-      <h3>Press & Media</h3>
-      <p>For press inquiries, interview requests, or media assets, contact our communications team at <a href="mailto:press@tablekard.com" style="color:#b8953a;font-weight:600;">press@tablekard.com</a>. We aim to respond to media requests within 24 hours.</p>
-    </div>
   </div>
 </div>
 

@@ -34,6 +34,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Leaflet CSS and JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?v=2" />
@@ -480,6 +481,68 @@
   .sp-split-col.good h3 { color: #1b873f; }
   .sp-split-col ul { padding-left: 20px; color: #444; line-height: 1.85; font-size: 0.95rem; margin: 0; }
 
+  /* ─── Comparison Table ─── */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: inherit;
+    background: #ffffff;
+  }
+  .comparison-table th {
+    background: #fcfcfc;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+  }
+  .comparison-table td {
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    vertical-align: middle;
+  }
+  .comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-table th.col-feature { width: 20%; }
+  .comparison-table th.col-bad { width: 40%; color: #d32f2f; background: rgba(239,68,68,0.02); }
+  .comparison-table th.col-good { width: 40%; color: #1b873f; background: rgba(34,197,94,0.02); }
+  
+  .comparison-table td.col-feature {
+    font-weight: 700;
+    color: #444;
+    background: #fdfdfd;
+  }
+  .comparison-table td.col-bad {
+    color: #666;
+    background: rgba(239,68,68,0.01);
+  }
+  .comparison-table td.col-good {
+    color: #1a1a1a;
+    font-weight: 500;
+    background: rgba(34,197,94,0.01);
+  }
+  .comparison-table td.col-bad .status-icon {
+    color: #ef4444;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  .comparison-table td.col-good .status-icon {
+    color: #22c55e;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
   /* ─── Values row ─── */
   .sp-values-grid {
     display: grid;
@@ -591,29 +654,48 @@
   <h2>The Problem We Solve</h2>
   <span class="sp-accent-line"></span>
   <p>Walk into almost any restaurant today and you will encounter the same friction: a dog-eared paper menu, a waiter who writes your order on a notepad, a kitchen that receives the note and might misread it, and a billing process that takes longer than the meal itself. Every step in that chain is an opportunity for error — and a hidden cost for the restaurant owner.</p>
-  <div class="sp-split" style="margin-top:24px;">
-    <div class="sp-split-col bad">
-      <h3>Without Tablekard</h3>
-      <ul>
-        <li>Paper menus — unhygienic, expensive to reprint, impossible to update instantly</li>
-        <li>Customers wait for a waiter just to begin ordering</li>
-        <li>Verbal orders lead to kitchen errors and customer complaints</li>
-        <li>₹50,000+ upfront cost for traditional POS hardware</li>
-        <li>No data — zero visibility into what sells, when, and to whom</li>
-        <li>Staff stretched thin managing orders manually across tables</li>
-      </ul>
-    </div>
-    <div class="sp-split-col good">
-      <h3>With Tablekard</h3>
-      <ul>
-        <li>Digital QR menu — update prices and items instantly from anywhere</li>
-        <li>Guests order the moment they sit down, without any waiter interaction</li>
-        <li>Digital orders go straight to the kitchen dashboard with zero errors</li>
-        <li>Starts from ₹999/month — no hardware investment needed</li>
-        <li>Real-time analytics: bestsellers, peak hours, revenue trends</li>
-        <li>Staff freed up to focus on hospitality, not order-taking</li>
-      </ul>
-    </div>
+  <div class="comparison-table-wrapper">
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th class="col-feature">Feature</th>
+          <th class="col-bad">Without Tablekard</th>
+          <th class="col-good">With Tablekard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-feature">Menu Management</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Paper menus — unhygienic, expensive to reprint, impossible to update instantly</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Digital QR menu — update prices and items instantly from anywhere</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Ordering Speed</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Customers wait for a waiter just to begin ordering</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Guests order the moment they sit down, without any waiter interaction</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Kitchen Accuracy</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Verbal orders lead to kitchen errors and customer complaints</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Digital orders go straight to the kitchen dashboard with zero errors</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Setup Cost</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>₹50,000+ upfront cost for traditional POS hardware</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Affordable monthly subscription — no hardware investment needed</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Data & Analytics</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>No data — zero visibility into what sells, when, and to whom</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Real-time analytics: bestsellers, peak hours, revenue trends</td>
+        </tr>
+        <tr>
+          <td class="col-feature">Staff Efficiency</td>
+          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Staff stretched thin managing orders manually across tables</td>
+          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Staff freed up to focus on hospitality, not order-taking</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 
@@ -739,7 +821,6 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Blog (Coming Soon)</a></li>
             <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>

@@ -34,6 +34,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Leaflet CSS and JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?v=2" />
@@ -480,6 +481,68 @@
   .sp-split-col.good h3 { color: #1b873f; }
   .sp-split-col ul { padding-left: 20px; color: #444; line-height: 1.85; font-size: 0.95rem; margin: 0; }
 
+  /* ─── Comparison Table ─── */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: inherit;
+    background: #ffffff;
+  }
+  .comparison-table th {
+    background: #fcfcfc;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+  }
+  .comparison-table td {
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    vertical-align: middle;
+  }
+  .comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-table th.col-feature { width: 20%; }
+  .comparison-table th.col-bad { width: 40%; color: #d32f2f; background: rgba(239,68,68,0.02); }
+  .comparison-table th.col-good { width: 40%; color: #1b873f; background: rgba(34,197,94,0.02); }
+  
+  .comparison-table td.col-feature {
+    font-weight: 700;
+    color: #444;
+    background: #fdfdfd;
+  }
+  .comparison-table td.col-bad {
+    color: #666;
+    background: rgba(239,68,68,0.01);
+  }
+  .comparison-table td.col-good {
+    color: #1a1a1a;
+    font-weight: 500;
+    background: rgba(34,197,94,0.01);
+  }
+  .comparison-table td.col-bad .status-icon {
+    color: #ef4444;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  .comparison-table td.col-good .status-icon {
+    color: #22c55e;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
   /* ─── Values row ─── */
   .sp-values-grid {
     display: grid;
@@ -586,51 +649,18 @@
   <p>Whether you are a restaurant owner looking to get started, a partner looking to integrate with our platform, a journalist with a press inquiry, or simply someone with a question — we would love to hear from you. Our team typically responds within one business day.</p>
 </div>
 
-<div class="sp-grid-3" style="margin-bottom:32px;">
+<div class="sp-grid-2" style="margin-bottom:32px;">
   <div class="sp-contact-card">
-    <span class="sp-contact-icon">✉️</span>
-    <h3>Email Us</h3>
-    <p>For general inquiries, support requests, or partnership opportunities. We respond to every email personally.</p>
-    <a class="sp-contact-link" href="mailto:hello@tablekard.com">hello@tablekard.com</a>
-  </div>
-  <div class="sp-contact-card">
-    <span class="sp-contact-icon">📞</span>
+    <span class="sp-contact-icon"><i class="fa-solid fa-phone"></i></span>
     <h3>Call Us</h3>
     <p>Speak directly with our restaurant onboarding specialists. Available Monday–Saturday, 9 AM–7 PM IST.</p>
     <a class="sp-contact-link" href="tel:+919101840955">+91 91018 40955</a>
   </div>
   <div class="sp-contact-card">
-    <span class="sp-contact-icon">💬</span>
+    <span class="sp-contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
     <h3>WhatsApp</h3>
     <p>The fastest way to reach us. Send a message anytime — we aim to reply within 2 hours during business hours.</p>
     <a href="https://wa.me/919101840955?text=Hi%20Tablekard%20Team!%20I%27d%20like%20to%20know%20more%20about%20your%20product." target="_blank" class="sp-btn-gold" style="display:inline-block;margin-top:4px;">Message Us →</a>
-  </div>
-</div>
-
-<div class="sp-card">
-  <h2>Dedicated Support Channels</h2>
-  <span class="sp-accent-line"></span>
-  <div class="sp-grid-2">
-    <div class="sp-icon-card">
-      <span class="sp-icon">🍽️</span>
-      <h3>Restaurant Onboarding</h3>
-      <p>New to Tablekard and want help setting up your restaurant? Email <a href="mailto:onboarding@tablekard.com" style="color:#b8953a;font-weight:600;">onboarding@tablekard.com</a> and one of our specialists will guide you through the entire process over a 30-minute video call.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🛠️</span>
-      <h3>Technical Support</h3>
-      <p>Experiencing an issue with the platform? Email <a href="mailto:support@tablekard.com" style="color:#b8953a;font-weight:600;">support@tablekard.com</a> with a description of the problem and your restaurant name. Pro subscribers receive priority response within 4 hours.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🤝</span>
-      <h3>Partnerships & Integrations</h3>
-      <p>Are you a POS provider, food aggregator, or technology company looking to integrate with Tablekard? Reach us at <a href="mailto:partnerships@tablekard.com" style="color:#b8953a;font-weight:600;">partnerships@tablekard.com</a>.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">📰</span>
-      <h3>Press & Media</h3>
-      <p>For press inquiries, interview requests, or media assets, contact our communications team at <a href="mailto:press@tablekard.com" style="color:#b8953a;font-weight:600;">press@tablekard.com</a>. We aim to respond to media requests within 24 hours.</p>
-    </div>
   </div>
 </div>
 
@@ -703,7 +733,6 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Blog (Coming Soon)</a></li>
             <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
