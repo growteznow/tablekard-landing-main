@@ -34,6 +34,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Leaflet CSS and JS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?v=2" />
@@ -480,6 +481,68 @@
   .sp-split-col.good h3 { color: #1b873f; }
   .sp-split-col ul { padding-left: 20px; color: #444; line-height: 1.85; font-size: 0.95rem; margin: 0; }
 
+  /* ─── Comparison Table ─── */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+  }
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: inherit;
+    background: #ffffff;
+  }
+  .comparison-table th {
+    background: #fcfcfc;
+    padding: 16px 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #333;
+    border-bottom: 2px solid rgba(0,0,0,0.06);
+  }
+  .comparison-table td {
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    vertical-align: middle;
+  }
+  .comparison-table tr:last-child td {
+    border-bottom: none;
+  }
+  .comparison-table th.col-feature { width: 20%; }
+  .comparison-table th.col-bad { width: 40%; color: #d32f2f; background: rgba(239,68,68,0.02); }
+  .comparison-table th.col-good { width: 40%; color: #1b873f; background: rgba(34,197,94,0.02); }
+  
+  .comparison-table td.col-feature {
+    font-weight: 700;
+    color: #444;
+    background: #fdfdfd;
+  }
+  .comparison-table td.col-bad {
+    color: #666;
+    background: rgba(239,68,68,0.01);
+  }
+  .comparison-table td.col-good {
+    color: #1a1a1a;
+    font-weight: 500;
+    background: rgba(34,197,94,0.01);
+  }
+  .comparison-table td.col-bad .status-icon {
+    color: #ef4444;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+  .comparison-table td.col-good .status-icon {
+    color: #22c55e;
+    margin-right: 8px;
+    font-weight: bold;
+  }
+
   /* ─── Values row ─── */
   .sp-values-grid {
     display: grid;
@@ -584,38 +647,7 @@
   <h2>Why Work at Tablekard?</h2>
   <span class="sp-accent-line"></span>
   <p>We are a small, focused team building technology that has a direct, measurable impact on the livelihoods of restaurant owners across India. At Tablekard, you will not disappear into a large org chart. You will own your work, ship frequently, and see your code used by real restaurants — often within days of writing it.</p>
-  <div class="sp-grid-3" style="margin-top:24px;">
-    <div class="sp-icon-card">
-      <span class="sp-icon">🚀</span>
-      <h3>Ship Fast, Learn Faster</h3>
-      <p>We deploy multiple times a week. You will see your work in production — and in front of restaurant owners — almost immediately.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🌏</span>
-      <h3>Remote-First Culture</h3>
-      <p>Work from anywhere in India. We are outcomes-driven, not hours-driven. As long as you deliver, your schedule is yours.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">📈</span>
-      <h3>Equity & Growth</h3>
-      <p>Early team members receive meaningful equity. As Tablekard grows, so does your stake in what we are building together.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🍽️</span>
-      <h3>Real-World Impact</h3>
-      <p>The software you build is used by real restaurant owners trying to grow their business. That is a responsibility we take seriously — and it makes the work meaningful.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🛠️</span>
-      <h3>Modern Tech Stack</h3>
-      <p>React, Next.js, Supabase, PostgreSQL, Razorpay, TypeScript. We use the best tools available and invest in keeping the codebase clean.</p>
-    </div>
-    <div class="sp-icon-card">
-      <span class="sp-icon">🎓</span>
-      <h3>Learning Budget</h3>
-      <p>Every team member gets an annual learning budget for courses, books, and conferences. We invest in your growth because it directly benefits our product.</p>
-    </div>
-  </div>
+
 </div>
 
 <div class="sp-card">
@@ -632,7 +664,7 @@
         <span class="sp-job-dept">Engineering</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Senior Full Stack Engineer" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Senior%20Full%20Stack%20Engineer%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 
   <div class="sp-job-card">
@@ -644,7 +676,7 @@
         <span class="sp-job-dept">Sales & Customer Success</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Restaurant Success Manager" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Restaurant%20Success%20Manager%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 
   <div class="sp-job-card">
@@ -656,7 +688,7 @@
         <span class="sp-job-dept">Design</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Product Designer" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Product%20Designer%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 
   <div class="sp-job-card">
@@ -668,7 +700,7 @@
         <span class="sp-job-dept">Marketing</span>
       </div>
     </div>
-    <a href="mailto:careers@tablekard.com?subject=Application: Growth Specialist" class="sp-btn-gold">Apply Now →</a>
+    <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20apply%20for%20the%20Growth%20%26%20Marketing%20Specialist%20position." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
   </div>
 </div>
 
@@ -679,7 +711,7 @@
     <div class="sp-step">
       <div class="sp-step__num">1</div>
       <h3>Application Review</h3>
-      <p>Send your CV and a short note on why you want to work at Tablekard to <strong>careers@tablekard.com</strong>. We read every application personally and respond within 5 business days.</p>
+      <p>Reach out to us on WhatsApp at <strong>+91 91018 40955</strong> stating the role you are applying for, along with a link to your CV or portfolio. We respond within 5 business days.</p>
     </div>
     <div class="sp-step">
       <div class="sp-step__num">2</div>
@@ -701,8 +733,8 @@
 
 <div class="sp-cta-banner">
   <h2>Don't See the Right Role?</h2>
-  <p>We are always interested in exceptional people. Send us your CV and tell us how you think you can contribute — we will keep it on file and reach out when the right opportunity comes up.</p>
-  <a href="mailto:careers@tablekard.com" class="sp-btn-gold">Send an Open Application →</a>
+  <p>We are always interested in exceptional people. Message us on WhatsApp and tell us how you think you can contribute — we will keep your profile on file and reach out when the right opportunity comes up.</p>
+  <a href="https://wa.me/919101840955?text=Hi!%20I%27d%20like%20to%20submit%20an%20open%20application%20to%20Tablekard." target="_blank" class="sp-btn-gold">Apply via WhatsApp →</a>
 </div>
 
     </div>
@@ -768,7 +800,6 @@
           <h4>Company</h4>
           <ul>
             <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Blog (Coming Soon)</a></li>
             <li><a href="careers.html">Careers</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
