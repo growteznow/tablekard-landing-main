@@ -375,7 +375,7 @@ Show the admin generating and downloading QR codes for individual tables.
 - Terms of Service
 
 ### Bottom Bar
-> © 2026 Tablekard by GrowTez. All rights reserved.
+> © 2026 Tablekard by growtez. All rights reserved.
 
 ---
 
