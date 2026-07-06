@@ -481,66 +481,192 @@
   .sp-split-col.good h3 { color: #1b873f; }
   .sp-split-col ul { padding-left: 20px; color: #444; line-height: 1.85; font-size: 0.95rem; margin: 0; }
 
-  /* ─── Comparison Table ─── */
-  .comparison-table-wrapper {
-    overflow-x: auto;
-    margin-top: 24px;
-    border-radius: 14px;
+  /* ─── Premium Comparison Cards ─── */
+  .cmp-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 28px;
+    margin-bottom: 18px;
+    padding: 0 4px;
+  }
+  .cmp-col-label {
+    flex: 1;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  .cmp-col-label.bad {
+    color: #c0392b;
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.18);
+  }
+  .cmp-col-label.good {
+    color: #1a7a3c;
+    background: rgba(34,197,94,0.08);
+    border: 1px solid rgba(34,197,94,0.18);
+  }
+  .cmp-col-label-spacer { width: 44px; flex-shrink: 0; }
+
+  .cmp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 0;
+  }
+  .cmp-card {
+    display: grid;
+    grid-template-columns: 1fr 44px 1fr;
+    align-items: stretch;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
     border: 1px solid rgba(0,0,0,0.06);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.02);
   }
-  .comparison-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
-    font-family: inherit;
+  .cmp-card:hover {
+    box-shadow: 0 8px 36px rgba(0,0,0,0.10);
+    transform: translateY(-2px);
+  }
+  .cmp-cell {
+    padding: 22px 24px;
+    font-size: 0.93rem;
+    line-height: 1.65;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .cmp-cell.bad {
+    background: linear-gradient(135deg, rgba(239,68,68,0.06) 0%, rgba(239,68,68,0.03) 100%);
+    border-right: 1px solid rgba(239,68,68,0.1);
+  }
+  .cmp-cell.good {
+    background: linear-gradient(135deg, rgba(34,197,94,0.05) 0%, rgba(34,197,94,0.02) 100%);
+    border-left: 1px solid rgba(34,197,94,0.1);
+  }
+  .cmp-cell-icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+  .cmp-cell.bad .cmp-cell-icon {
+    background: rgba(239,68,68,0.12);
+    color: #dc2626;
+  }
+  .cmp-cell.good .cmp-cell-icon {
+    background: rgba(34,197,94,0.14);
+    color: #16a34a;
+  }
+  .cmp-cell-text { flex: 1; }
+  .cmp-cell.bad .cmp-cell-text { color: #6b6b6b; }
+  .cmp-cell.good .cmp-cell-text { color: #1a2e1a; font-weight: 500; }
+
+  .cmp-divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: #ffffff;
+    gap: 4px;
+    padding: 4px 0;
   }
-  .comparison-table th {
-    background: #fcfcfc;
-    padding: 16px 20px;
+  .cmp-divider-line {
+    flex: 1;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #e0e0e0, transparent);
+  }
+  .cmp-divider-vs {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #bbb;
+    padding: 2px 0;
+  }
+
+  .cmp-feature-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #1c1c1c;
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
     font-weight: 700;
-    font-size: 0.95rem;
-    color: #333;
-    border-bottom: 2px solid rgba(0,0,0,0.06);
+    letter-spacing: 0.04em;
+    padding: 5px 14px 5px 8px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
-  .comparison-table td {
-    padding: 16px 20px;
-    font-size: 0.92rem;
-    line-height: 1.6;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    vertical-align: middle;
+  .cmp-feature-badge-dot {
+    width: 8px; height: 8px;
+    background: #d9b550;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
   }
-  .comparison-table tr:last-child td {
-    border-bottom: none;
-  }
-  .comparison-table th.col-feature { width: 20%; }
-  .comparison-table th.col-bad { width: 40%; color: #d32f2f; background: rgba(239,68,68,0.02); }
-  .comparison-table th.col-good { width: 40%; color: #1b873f; background: rgba(34,197,94,0.02); }
-  
-  .comparison-table td.col-feature {
-    font-weight: 700;
-    color: #444;
-    background: #fdfdfd;
-  }
-  .comparison-table td.col-bad {
-    color: #666;
-    background: rgba(239,68,68,0.01);
-  }
-  .comparison-table td.col-good {
-    color: #1a1a1a;
-    font-weight: 500;
-    background: rgba(34,197,94,0.01);
-  }
-  .comparison-table td.col-bad .status-icon {
-    color: #ef4444;
-    margin-right: 8px;
-    font-weight: bold;
-  }
-  .comparison-table td.col-good .status-icon {
-    color: #22c55e;
-    margin-right: 8px;
-    font-weight: bold;
+
+  @media (max-width: 620px) {
+    .cmp-section-header { display: none; }
+    .cmp-card {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+    }
+    .cmp-cell.bad { border-right: none; border-bottom: 1px solid rgba(239,68,68,0.12); }
+    .cmp-cell.good { border-left: none; }
+    .cmp-divider { display: none; }
+
+    /* Inline "Without / With" labels on mobile */
+    .cmp-cell.bad::before {
+      content: '✕  Without Tablekard';
+      display: block;
+      width: 100%;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c0392b;
+      background: rgba(239,68,68,0.08);
+      border: 1px solid rgba(239,68,68,0.18);
+      border-radius: 6px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+    .cmp-cell.good::before {
+      content: '✓  With Tablekard';
+      display: block;
+      width: 100%;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1a7a3c;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.18);
+      border-radius: 6px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+    .cmp-cell {
+      flex-wrap: wrap;
+    }
+    .cmp-cell-icon { margin-top: 0; }
   }
 
   /* ─── Values row ─── */
@@ -656,48 +782,111 @@
   <h2>The Problem We Solve</h2>
   <span class="sp-accent-line"></span>
   <p>Walk into almost any restaurant today and you will encounter the same friction: a dog-eared paper menu, a waiter who writes your order on a notepad, a kitchen that receives the note and might misread it, and a billing process that takes longer than the meal itself. Every step in that chain is an opportunity for error — and a hidden cost for the restaurant owner.</p>
-  <div class="comparison-table-wrapper">
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th class="col-feature">Feature</th>
-          <th class="col-bad">Without Tablekard</th>
-          <th class="col-good">With Tablekard</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="col-feature">Menu Management</td>
-          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Paper menus — unhygienic, expensive to reprint, impossible to update instantly</td>
-          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Digital QR menu — update prices and items instantly from anywhere</td>
-        </tr>
-        <tr>
-          <td class="col-feature">Ordering Speed</td>
-          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Customers wait for a waiter just to begin ordering</td>
-          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Guests order the moment they sit down, without any waiter interaction</td>
-        </tr>
-        <tr>
-          <td class="col-feature">Kitchen Accuracy</td>
-          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Verbal orders lead to kitchen errors and customer complaints</td>
-          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Digital orders go straight to the kitchen dashboard with zero errors</td>
-        </tr>
-        <tr>
-          <td class="col-feature">Setup Cost</td>
-          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>₹50,000+ upfront cost for traditional POS hardware</td>
-          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Affordable monthly subscription — no hardware investment needed</td>
-        </tr>
-        <tr>
-          <td class="col-feature">Data & Analytics</td>
-          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>No data — zero visibility into what sells, when, and to whom</td>
-          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Real-time analytics: bestsellers, peak hours, revenue trends</td>
-        </tr>
-        <tr>
-          <td class="col-feature">Staff Efficiency</td>
-          <td class="col-bad"><span class="status-icon"><i class="fa-solid fa-xmark"></i></span>Staff stretched thin managing orders manually across tables</td>
-          <td class="col-good"><span class="status-icon"><i class="fa-solid fa-check"></i></span>Staff freed up to focus on hospitality, not order-taking</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Column header labels -->
+  <div class="cmp-section-header">
+    <div class="cmp-col-label bad"><i class="fa-solid fa-xmark" style="margin-right:6px;"></i>Without Tablekard</div>
+    <div class="cmp-col-label-spacer"></div>
+    <div class="cmp-col-label good"><i class="fa-solid fa-check" style="margin-right:6px;"></i>With Tablekard</div>
+  </div>
+
+  <div class="cmp-list">
+
+    <!-- Menu Management -->
+    <div>
+      <div class="cmp-feature-badge"><span class="cmp-feature-badge-dot"></span>Menu Management</div>
+      <div class="cmp-card">
+        <div class="cmp-cell bad">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-xmark"></i></span>
+          <span class="cmp-cell-text">Paper menus — unhygienic, expensive to reprint, impossible to update instantly</span>
+        </div>
+        <div class="cmp-divider"><div class="cmp-divider-line"></div><span class="cmp-divider-vs">VS</span><div class="cmp-divider-line"></div></div>
+        <div class="cmp-cell good">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-check"></i></span>
+          <span class="cmp-cell-text">Digital QR menu — update prices and items instantly from anywhere</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ordering Speed -->
+    <div>
+      <div class="cmp-feature-badge"><span class="cmp-feature-badge-dot"></span>Ordering Speed</div>
+      <div class="cmp-card">
+        <div class="cmp-cell bad">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-xmark"></i></span>
+          <span class="cmp-cell-text">Customers wait for a waiter just to begin ordering</span>
+        </div>
+        <div class="cmp-divider"><div class="cmp-divider-line"></div><span class="cmp-divider-vs">VS</span><div class="cmp-divider-line"></div></div>
+        <div class="cmp-cell good">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-check"></i></span>
+          <span class="cmp-cell-text">Guests order the moment they sit down, without any waiter interaction</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kitchen Accuracy -->
+    <div>
+      <div class="cmp-feature-badge"><span class="cmp-feature-badge-dot"></span>Kitchen Accuracy</div>
+      <div class="cmp-card">
+        <div class="cmp-cell bad">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-xmark"></i></span>
+          <span class="cmp-cell-text">Verbal orders lead to kitchen errors and customer complaints</span>
+        </div>
+        <div class="cmp-divider"><div class="cmp-divider-line"></div><span class="cmp-divider-vs">VS</span><div class="cmp-divider-line"></div></div>
+        <div class="cmp-cell good">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-check"></i></span>
+          <span class="cmp-cell-text">Digital orders go straight to the kitchen dashboard with zero errors</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Setup Cost -->
+    <div>
+      <div class="cmp-feature-badge"><span class="cmp-feature-badge-dot"></span>Setup Cost</div>
+      <div class="cmp-card">
+        <div class="cmp-cell bad">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-xmark"></i></span>
+          <span class="cmp-cell-text">₹50,000+ upfront cost for traditional POS hardware</span>
+        </div>
+        <div class="cmp-divider"><div class="cmp-divider-line"></div><span class="cmp-divider-vs">VS</span><div class="cmp-divider-line"></div></div>
+        <div class="cmp-cell good">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-check"></i></span>
+          <span class="cmp-cell-text">Affordable monthly subscription — no hardware investment needed</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data & Analytics -->
+    <div>
+      <div class="cmp-feature-badge"><span class="cmp-feature-badge-dot"></span>Data &amp; Analytics</div>
+      <div class="cmp-card">
+        <div class="cmp-cell bad">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-xmark"></i></span>
+          <span class="cmp-cell-text">No data — zero visibility into what sells, when, and to whom</span>
+        </div>
+        <div class="cmp-divider"><div class="cmp-divider-line"></div><span class="cmp-divider-vs">VS</span><div class="cmp-divider-line"></div></div>
+        <div class="cmp-cell good">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-check"></i></span>
+          <span class="cmp-cell-text">Real-time analytics: bestsellers, peak hours, revenue trends</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Staff Efficiency -->
+    <div>
+      <div class="cmp-feature-badge"><span class="cmp-feature-badge-dot"></span>Staff Efficiency</div>
+      <div class="cmp-card">
+        <div class="cmp-cell bad">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-xmark"></i></span>
+          <span class="cmp-cell-text">Staff stretched thin managing orders manually across tables</span>
+        </div>
+        <div class="cmp-divider"><div class="cmp-divider-line"></div><span class="cmp-divider-vs">VS</span><div class="cmp-divider-line"></div></div>
+        <div class="cmp-cell good">
+          <span class="cmp-cell-icon"><i class="fa-solid fa-check"></i></span>
+          <span class="cmp-cell-text">Staff freed up to focus on hospitality, not order-taking</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -920,25 +1109,7 @@
 
   <script src="js/main.js"></script>
   
-<script>
-  (function () {
-    var btn = document.getElementById('nav-hamburger');
-    var drawer = document.getElementById('navbar-drawer');
-    if (!btn || !drawer) return;
-    btn.addEventListener('click', function () {
-      var isOpen = drawer.classList.toggle('is-open');
-      btn.classList.toggle('is-open', isOpen);
-      btn.setAttribute('aria-expanded', isOpen);
-    });
-    drawer.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        drawer.classList.remove('is-open');
-        btn.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-</script>
+
 
   
 
