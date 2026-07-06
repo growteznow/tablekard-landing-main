@@ -415,7 +415,7 @@ Sign Up → Restaurant Profile → Menu Setup → Table Setup → Go Live! 🎉
 |---|---|---|---|
 | Full Name | Text | ✅ | "Your full name" |
 | Email | Email | ✅ | "you@restaurant.com" |
-| Phone Number | Tel | ✅ | "+91 98765 43210" |
+| Phone Number | Tel | ✅ | "+91 91018 40955" |
 | Password | Password | ✅ | "Create a strong password" |
 
 **Or sign up with:**
