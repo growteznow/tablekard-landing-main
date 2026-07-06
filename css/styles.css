@@ -530,18 +530,10 @@ ul {
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.12));
 }
 
-.hero-v2__float--analytics {
-  width: clamp(230px, 24vw, 360px);
-  top: 45%;
-  left: 2%;
-  animation: floatSlow 5s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-
 .hero-v2__float--kitchen-queue {
-  width: clamp(210px, 22vw, 320px);
+  width: clamp(165px, 17.2vw, 250px);
   top: 4%;
-  right: 5%;
+  right: 10%;
   animation: floatSlow 5.5s ease-in-out infinite;
   animation-delay: 1s;
 }
@@ -555,8 +547,8 @@ ul {
 }
 
 .hero-v2__float--mobile-menu {
-  width: clamp(200px, 22vw, 310px);
-  top: 8%;
+  width: clamp(220px, 24.2vw, 341px);
+  top: 26%;
   left: 5%;
   transform: rotate(-10deg);
   animation: floatSlow 4.5s ease-in-out infinite;
@@ -680,11 +672,6 @@ ul {
     padding-top: 140px;
   }
 
-  .hero-v2__float--analytics {
-    left: -3%;
-    width: clamp(170px, 20vw, 240px);
-  }
-
   .hero-v2__float--kitchen-queue {
     right: 1%;
     width: clamp(160px, 18vw, 220px);
@@ -714,15 +701,6 @@ ul {
   }
 
   /* Restore floating images at mobile-friendly sizes */
-  .hero-v2__float--analytics {
-    display: none;
-    width: 130px;
-    top: auto;
-    bottom: 10%;
-    left: 0%;
-    animation-delay: 0.5s;
-  }
-
   .hero-v2__float--kitchen-queue {
     display: none;
     width: 120px;
@@ -2710,6 +2688,7 @@ ul {
 
 /* === Mobile Optimizations for Sub-pages (About, Careers, Contact, etc.) === */
 @media (max-width: 768px) {
+
   /* Center text on mobile */
   .sp-hero,
   .sp-main,
