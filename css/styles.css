@@ -1858,7 +1858,26 @@ ul {
   transform-origin: left;
 }
 
+/* Contact Us button in navbar */
+.navbar__contact-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  padding: 7px 18px;
+  transition: background 0.22s ease, border-color 0.22s ease, color 0.22s ease, box-shadow 0.22s ease;
+  white-space: nowrap;
+}
 
+.navbar__contact-btn:hover {
+  background: #f0d27a;
+  border-color: #f0d27a;
+  color: #1c1c1c;
+  box-shadow: 0 4px 14px rgba(240, 210, 122, 0.35);
+}
 
 @media (max-width: 768px) {
   .navbar__nav {
