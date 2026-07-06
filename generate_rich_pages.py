@@ -639,7 +639,6 @@ def make_page(page_title, page_meta_desc, hero_badge, hero_h1, hero_sub, body_ht
 
   {footer_and_scripts}
   <script src="js/main.js"></script>
-  {HAMBURGER_JS}
   {extra_js}
 
 </body>
