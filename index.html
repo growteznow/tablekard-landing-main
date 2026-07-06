@@ -96,23 +96,27 @@
   </header>
 
 
-  <!-- New Hero Preview Section -->
-  <section class="new-hero-preview">
-    <div class="container new-hero-grid">
+  <!-- Video Preview Section -->
+  <section class="video-preview-section">
+    <!-- Dark overlay for text contrast -->
+    <div class="video-preview-overlay"></div>
+
+    <video id="bg-video" autoplay loop muted playsinline preload="auto">
+      <source src="images/background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="container video-preview-container">
       <!-- Left Aligned Content -->
-      <div class="new-hero-content">
-        <span class="new-hero-subtitle">Do you have a restaurant?</span>
-        <h2 class="new-hero-title">Modernise it with Tablekard</h2>
+      <div class="video-preview-content">
+        <span class="video-preview-subtitle">Do you have a restaurant?</span>
+        <h2 class="video-preview-title">Modernise it with Tablekard</h2>
         <p
-          style="font-size: 1.05rem; color: #555; max-width: 500px; line-height: 1.6; margin-top: -12px; margin-bottom: 28px; font-family: 'Inter', sans-serif;">
+          style="font-size: 1.05rem; color: #e0e0e0; max-width: 500px; line-height: 1.6; margin-top: -12px; margin-bottom: 28px; font-family: 'Inter', sans-serif; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);">
           Give your diners the speed and convenience of scanning, ordering, and paying directly from their tables.
           Reduce wait times, optimize staff service, and boost your sales.
         </p>
-        <a href="#register" class="btn btn--primary btn-video-cta">Get Started Free →</a>
-      </div>
-      <!-- Right Image -->
-      <div class="new-hero-image-wrapper">
-        <img src="images/qr-stand1.jpg" alt="Tablekard Premium QR Stand" class="new-hero-image">
+        <a href="#register" class="btn-video-cta">Get Started Free →</a>
       </div>
     </div>
   </section>

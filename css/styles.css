@@ -1749,6 +1749,40 @@ ul {
   height: 100%;
   object-fit: cover;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-preview-section video.video-loaded {
+  opacity: 1;
+}
+
+/* Animated content entrance with custom cubic-bezier curve */
+.video-preview-content > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.video-preview-section.section-loaded .video-preview-content > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.video-preview-section.section-loaded .video-preview-subtitle {
+  transition-delay: 0.15s;
+}
+
+.video-preview-section.section-loaded .video-preview-title {
+  transition-delay: 0.3s;
+}
+
+.video-preview-section.section-loaded p {
+  transition-delay: 0.45s;
+}
+
+.video-preview-section.section-loaded .btn-video-cta {
+  transition-delay: 0.6s;
 }
 
 @media (max-width: 768px) {
@@ -1980,7 +2014,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .preloader__spinner {
@@ -2616,75 +2650,7 @@ ul {
   }
 }
 
-/* === New Hero Preview Section === */
-.new-hero-preview {
-  background: linear-gradient(135deg, #fdfbf5 0%, #fffdf4 100%);
-  padding: 80px 0;
-  margin-top: 80px;
-  border-bottom: 1px solid rgba(217, 181, 80, 0.15);
-}
 
-.new-hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-  align-items: center;
-}
-
-.new-hero-content {
-  text-align: left;
-}
-
-.new-hero-subtitle {
-  display: inline-block;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(0.9rem, 1.5vw, 1.15rem);
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #d9b550;
-  margin-bottom: 12px;
-  letter-spacing: 0.05em;
-}
-
-.new-hero-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.15;
-  color: #1c1c1c;
-  margin-bottom: 24px;
-}
-
-.new-hero-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.new-hero-image {
-  width: 100%;
-  max-width: 420px;
-  max-height: 380px;
-  object-fit: contain;
-  border-radius: 16px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-}
-
-@media (max-width: 768px) {
-  .new-hero-preview {
-    padding: 60px 0;
-    margin-top: 60px;
-  }
-
-  .new-hero-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .new-hero-image {
-    max-height: 300px;
-  }
-}
 
 /* === Mobile Optimizations for Sub-pages (About, Careers, Contact, etc.) === */
 @media (max-width: 768px) {

@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById('bg-video');
+  if (video) {
+    video.playbackRate = 0.6;
+  }
   const preloader = document.getElementById('site-preloader');
   if (preloader) {
     let isLoaded = false;
@@ -7,6 +10,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!isLoaded) {
         isLoaded = true;
         preloader.classList.add('preloader--hidden');
+        if (video) {
+          video.classList.add('video-loaded');
+          const previewSec = document.querySelector('.video-preview-section');
+          if (previewSec) {
+            previewSec.classList.add('section-loaded');
+          }
+        }
       }
     };
     if (video) {
